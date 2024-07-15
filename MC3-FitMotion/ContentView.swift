@@ -9,8 +9,10 @@ import SwiftUI
 
 
 struct ContentView: View {
+    @State var isPresented: Bool = true
     
     @EnvironmentObject var vm: AppViewModel
+    @State private var showAlert = false
     
     var body: some View {
         switch vm.dataScannerAccessStatus {
@@ -24,18 +26,16 @@ struct ContentView: View {
             Text("Your device doesn't support scanning barcode")
         case .scannerAvailable:
             CameraView()
-                            .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.all)
+                .swipableAlert(isPresented: $showAlert)
+                .onAppear {
+                    showAlert = true
+                }
         }
-        //        VStack {
-        //            Image(systemName: "globe")
-        //                .imageScale(.large)
-        //                .foregroundStyle(.tint)
-        //            Text("Hello, world!")
-        //        }
-        //        .padding()
+        
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
