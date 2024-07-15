@@ -15,23 +15,24 @@ struct ContentView: View {
     var body: some View {
         switch vm.dataScannerAccessStatus {
         case .notDetermined:
-            <#code#>
+            Text("Requesting camera access")
         case .cameraAccessNotGranted:
-            <#code#>
+            Text("Please provide access to the camera in settings")
         case .cameraNotAvailable:
             Text("Your device doesn't have a camera")
-        case .scannerAvailable:
-            Text("Scanner is Available")
         case .scannerNotAvailable:
             Text("Your device doesn't support scanning barcode")
+        case .scannerAvailable:
+            CameraView()
+                            .edgesIgnoringSafeArea(.all)
         }
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        //        VStack {
+        //            Image(systemName: "globe")
+        //                .imageScale(.large)
+        //                .foregroundStyle(.tint)
+        //            Text("Hello, world!")
+        //        }
+        //        .padding()
     }
 }
 

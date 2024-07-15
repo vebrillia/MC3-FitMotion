@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct MC3_FitMotionApp: App {
 
-    @StateObject private var vm: AppViewModel()
+    @StateObject private var vm = AppViewModel()
     
     var body: some Scene {
         WindowGroup {

@@ -12,6 +12,7 @@
 		048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B52C43BE9C00A60AC0 /* Assets.xcassets */; };
 		048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */; };
 		048D50C02C43C07E00A60AC0 /* FitMotion-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50BF2C43C07E00A60AC0 /* FitMotion-ViewModel.swift */; };
+		9035808A2C4510E900F0D2CD /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903580892C4510E900F0D2CD /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		048D50B52C43BE9C00A60AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		048D50BF2C43C07E00A60AC0 /* FitMotion-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FitMotion-ViewModel.swift"; sourceTree = "<group>"; };
+		903580892C4510E900F0D2CD /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */,
 				048D50B32C43BE9A00A60AC0 /* ContentView.swift */,
+				903580892C4510E900F0D2CD /* CameraView.swift */,
 				048D50BF2C43C07E00A60AC0 /* FitMotion-ViewModel.swift */,
 				048D50B52C43BE9C00A60AC0 /* Assets.xcassets */,
 				048D50B72C43BE9C00A60AC0 /* Preview Content */,
@@ -143,6 +146,7 @@
 				048D50B42C43BE9A00A60AC0 /* ContentView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */,
 				048D50C02C43C07E00A60AC0 /* FitMotion-ViewModel.swift in Sources */,
+				9035808A2C4510E900F0D2CD /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +280,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = A3M9W4T4P6;
+				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
@@ -306,7 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = A3M9W4T4P6;
+				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
