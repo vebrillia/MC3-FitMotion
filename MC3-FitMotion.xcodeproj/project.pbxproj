@@ -11,7 +11,6 @@
 		048D50B42C43BE9A00A60AC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50B32C43BE9A00A60AC0 /* ContentView.swift */; };
 		048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B52C43BE9C00A60AC0 /* Assets.xcassets */; };
 		048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */; };
-		048D50C02C43C07E00A60AC0 /* FitMotion-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50BF2C43C07E00A60AC0 /* FitMotion-ViewModel.swift */; };
 		048D50C62C451B4200A60AC0 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50C52C451B4200A60AC0 /* PopUp.swift */; };
 		9035808A2C4510E900F0D2CD /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903580892C4510E900F0D2CD /* CameraView.swift */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		048D50B32C43BE9A00A60AC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		048D50B52C43BE9C00A60AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		048D50BF2C43C07E00A60AC0 /* FitMotion-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FitMotion-ViewModel.swift"; sourceTree = "<group>"; };
 		048D50C52C451B4200A60AC0 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		903580892C4510E900F0D2CD /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,10 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */,
-				048D50B32C43BE9A00A60AC0 /* ContentView.swift */,
-				903580892C4510E900F0D2CD /* CameraView.swift */,
-				048D50BF2C43C07E00A60AC0 /* FitMotion-ViewModel.swift */,
-				048D50C52C451B4200A60AC0 /* PopUp.swift */,
+				AAFD67B02C4650F1003FB64E /* Model */,
+				AAFD67AF2C4650D4003FB64E /* View Model */,
+				AAFD67AE2C4650C7003FB64E /* View */,
 				048D50B52C43BE9C00A60AC0 /* Assets.xcassets */,
 				048D50B72C43BE9C00A60AC0 /* Preview Content */,
 			);
@@ -74,6 +71,38 @@
 				048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAFD67AE2C4650C7003FB64E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAFD67B12C4651C3003FB64E /* Component */,
+				048D50B32C43BE9A00A60AC0 /* ContentView.swift */,
+				903580892C4510E900F0D2CD /* CameraView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AAFD67AF2C4650D4003FB64E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		AAFD67B02C4650F1003FB64E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AAFD67B12C4651C3003FB64E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				048D50C52C451B4200A60AC0 /* PopUp.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +177,6 @@
 			files = (
 				048D50B42C43BE9A00A60AC0 /* ContentView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */,
-				048D50C02C43C07E00A60AC0 /* FitMotion-ViewModel.swift in Sources */,
 				048D50C62C451B4200A60AC0 /* PopUp.swift in Sources */,
 				9035808A2C4510E900F0D2CD /* CameraView.swift in Sources */,
 			);
@@ -284,7 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = A3M9W4T4P6;
+				DEVELOPMENT_TEAM = TCTRPSM3Y8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
@@ -314,7 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = A3M9W4T4P6;
+				DEVELOPMENT_TEAM = TCTRPSM3Y8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
