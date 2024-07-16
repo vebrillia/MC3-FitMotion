@@ -27,7 +27,6 @@ struct ContentView: View {
         case .scannerAvailable:
             CameraView()
                 .edgesIgnoringSafeArea(.all)
-                .swipableAlert(isPresented: $showAlert)
                 .onAppear {
                     showAlert = true
                 }

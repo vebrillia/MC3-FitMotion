@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0450F1F72C46669B003C02CA /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0450F1F62C46669B003C02CA /* SDWebImageSwiftUI */; };
+		0450F1FC2C46D817003C02CA /* OverlaySetRepCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450F1FB2C46D817003C02CA /* OverlaySetRepCounter.swift */; };
 		048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */; };
 		048D50B42C43BE9A00A60AC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50B32C43BE9A00A60AC0 /* ContentView.swift */; };
 		048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B52C43BE9C00A60AC0 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0450F1FA2C46676F003C02CA /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
+		0450F1FB2C46D817003C02CA /* OverlaySetRepCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlaySetRepCounter.swift; sourceTree = "<group>"; };
 		048D50AE2C43BE9A00A60AC0 /* MC3-FitMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-FitMotion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_FitMotionApp.swift; sourceTree = "<group>"; };
 		048D50B32C43BE9A00A60AC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,12 +36,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0450F1F72C46669B003C02CA /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0450F1F42C465B07003C02CA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		048D50A52C43BE9A00A60AC0 = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +74,10 @@
 				903580892C4510E900F0D2CD /* CameraView.swift */,
 				048D50BF2C43C07E00A60AC0 /* FitMotion-ViewModel.swift */,
 				048D50C52C451B4200A60AC0 /* PopUp.swift */,
+				0450F1FB2C46D817003C02CA /* OverlaySetRepCounter.swift */,
 				048D50B52C43BE9C00A60AC0 /* Assets.xcassets */,
+				0450F1FA2C46676F003C02CA /* giphy.gif */,
+				0450F1F42C465B07003C02CA /* Assets */,
 				048D50B72C43BE9C00A60AC0 /* Preview Content */,
 			);
 			path = "MC3-FitMotion";
@@ -92,6 +107,9 @@
 			dependencies = (
 			);
 			name = "MC3-FitMotion";
+			packageProductDependencies = (
+				0450F1F62C46669B003C02CA /* SDWebImageSwiftUI */,
+			);
 			productName = "MC3-FitMotion";
 			productReference = 048D50AE2C43BE9A00A60AC0 /* MC3-FitMotion.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 048D50A52C43BE9A00A60AC0;
+			packageReferences = (
+				0450F1F52C46669B003C02CA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 048D50AF2C43BE9A00A60AC0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -150,6 +171,7 @@
 				048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */,
 				048D50C02C43C07E00A60AC0 /* FitMotion-ViewModel.swift in Sources */,
 				048D50C62C451B4200A60AC0 /* PopUp.swift in Sources */,
+				0450F1FC2C46D817003C02CA /* OverlaySetRepCounter.swift in Sources */,
 				9035808A2C4510E900F0D2CD /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0450F1F52C46669B003C02CA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0450F1F62C46669B003C02CA /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0450F1F52C46669B003C02CA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 048D50A62C43BE9A00A60AC0 /* Project object */;
 }
