@@ -10,24 +10,23 @@ import Vision
 import Combine
 import CoreImage
 
+typealias Frame = CMSampleBuffer
+typealias FramePublisher = AnyPublisher<Frame, Never>
+
 protocol VideoProcessingChainDelegate: AnyObject {
     /// Informs the delegate when Vision analyzes an image in the frame chain.
     /// - Parameters:
     ///   - chain: A video-processing chain.
     ///   - poses: An array of poses.
     ///   - frame: A `CGImage` of the frame.
-    func videoProcessingChain(_ chain: VideoProcessingChain,
-                              didDetect poses: [Pose]?,
-                              in frame: CGImage)
+    func videoProcessingChain(_ chain: VideoProcessingChain, didDetect poses: [Pose]?, in frame: CGImage)
 
     /// Informs the delegate when a video frame chain predicts an action.
     /// - Parameters:
     ///   - chain: A video-processing chain.
     ///   - actionPrediction: An action prediction.
     ///   - duration: The span of time the prediction represents.
-    func videoProcessingChain(_ chain: VideoProcessingChain,
-                              didPredict actionPrediction: ActionPrediction,
-                              for frames: Int)
+    func videoProcessingChain(_ chain: VideoProcessingChain, didPredict actionPrediction: ActionPrediction, for frames: Int)
 }
 
 /// Builds a chain of Combine publishers / subscribers from the upstream frame

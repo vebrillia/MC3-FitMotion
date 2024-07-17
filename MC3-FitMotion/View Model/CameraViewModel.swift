@@ -1,17 +1,12 @@
 import AVFoundation
 import Combine
 
-class CameraViewModel: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, ObservableObject {
-    typealias Frame = CMSampleBuffer
-    typealias FramePublisher = AnyPublisher<Frame, Never>
-    
+class CameraViewModel: NSObject {
     private var videoOutput: AVCaptureVideoDataOutput?
     private var videoCaptureDevice: AVCaptureDevice?
-    private var framePublisher: PassthroughSubject<Frame, Never>?
     
-    private let videoCaptureQueue = DispatchQueue(label: "Video Capture Queue", qos: .userInitiated)
-    
-    @Published var captureSession: AVCaptureSession?
+    let classifier = MLClassifier()
+    var captureSession: AVCaptureSession?
     
     override init() {
         super.init()
@@ -19,8 +14,7 @@ class CameraViewModel: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, O
         configureCaptureDevice()
         configureVideoInput()
         configureVideoOutput()
-        createFramePublisher()
-        captureSession?.startRunning()
+        startCaptureSession()
     }
     
     // MARK: - Setup Capture Session
@@ -49,18 +43,11 @@ class CameraViewModel: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, O
         }
     }
     
-    private func createFramePublisher() {
-        let passthroughSubject = PassthroughSubject<Frame, Never>()
-        framePublisher = passthroughSubject
-    }
-    
-    
     // MARK: - Configure Video Output
     private func configureVideoOutput() {
         guard let captureSession = captureSession else { return }
         
         videoOutput = AVCaptureVideoDataOutput()
-        videoOutput?.setSampleBufferDelegate(self, queue: videoCaptureQueue)
         
         if captureSession.canAddOutput(videoOutput!) {
             captureSession.addOutput(videoOutput!)
@@ -68,14 +55,20 @@ class CameraViewModel: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, O
         
         videoOutput?.alwaysDiscardsLateVideoFrames = true
     }
+    
+    // MARK: - Start Capture Session
+    private func startCaptureSession() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.captureSession?.startRunning()
+        }
+        
+        videoOutput?.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoDispatchQueue"))
+    }
+    
 }
 
-extension CameraViewModel {
-    func captureOutput(_ output: AVCaptureOutput,
-                       didOutput frame: Frame,
-                       from connection: AVCaptureConnection) {
-
-        print("Frame Sent")
-        framePublisher?.send(frame)
+extension CameraViewModel: AVCaptureVideoDataOutputSampleBufferDelegate {
+    func captureOutput(_ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        classifier.estimation(sampleBuffer: sampleBuffer)
     }
 }

@@ -12,6 +12,10 @@ struct ContentView: View {
         ZStack {
             CameraView()
                 .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Spacer()
+            }
         }
     }
 }
