@@ -8,25 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */; };
-		048D50B42C43BE9A00A60AC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50B32C43BE9A00A60AC0 /* ContentView.swift */; };
 		048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B52C43BE9C00A60AC0 /* Assets.xcassets */; };
 		048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */; };
-		048D50C02C43C07E00A60AC0 /* FitMotion-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50BF2C43C07E00A60AC0 /* FitMotion-ViewModel.swift */; };
 		048D50C62C451B4200A60AC0 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50C52C451B4200A60AC0 /* PopUp.swift */; };
-		9035808A2C4510E900F0D2CD /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903580892C4510E900F0D2CD /* CameraView.swift */; };
 		9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035808D2C47AD8F00F0D2CD /* TimerView.swift */; };
+		AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E42C47DFB5003FB64E /* CameraView.swift */; };
+		AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */; };
+		AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */; };
+		AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67EE2C47E002003FB64E /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		048D50AE2C43BE9A00A60AC0 /* MC3-FitMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-FitMotion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_FitMotionApp.swift; sourceTree = "<group>"; };
-		048D50B32C43BE9A00A60AC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		048D50B52C43BE9C00A60AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		048D50BF2C43C07E00A60AC0 /* FitMotion-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FitMotion-ViewModel.swift"; sourceTree = "<group>"; };
 		048D50C52C451B4200A60AC0 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
-		903580892C4510E900F0D2CD /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		9035808D2C47AD8F00F0D2CD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		AAFD67EE2C47E002003FB64E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */,
-				048D50B32C43BE9A00A60AC0 /* ContentView.swift */,
-				903580892C4510E900F0D2CD /* CameraView.swift */,
-				048D50BF2C43C07E00A60AC0 /* FitMotion-ViewModel.swift */,
-				048D50C52C451B4200A60AC0 /* PopUp.swift */,
 				048D50B52C43BE9C00A60AC0 /* Assets.xcassets */,
+				AAFD67EB2C47DFC6003FB64E /* View */,
+				AAFD67EC2C47DFCE003FB64E /* View Model */,
+				AAFD67EA2C47DFB9003FB64E /* Model */,
 				048D50B72C43BE9C00A60AC0 /* Preview Content */,
 				9035808D2C47AD8F00F0D2CD /* TimerView.swift */,
 			);
@@ -77,6 +78,42 @@
 				048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAFD67EA2C47DFB9003FB64E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AAFD67EB2C47DFC6003FB64E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAFD67ED2C47DFEC003FB64E /* Component */,
+				AAFD67EE2C47E002003FB64E /* ContentView.swift */,
+				AAFD67E42C47DFB5003FB64E /* CameraView.swift */,
+			);
+			name = View;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AAFD67EC2C47DFCE003FB64E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */,
+				AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */,
+			);
+			name = "View Model";
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AAFD67ED2C47DFEC003FB64E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				048D50C52C451B4200A60AC0 /* PopUp.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,11 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */,
-				048D50B42C43BE9A00A60AC0 /* ContentView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */,
-				048D50C02C43C07E00A60AC0 /* FitMotion-ViewModel.swift in Sources */,
+				AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */,
+				AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */,
+				AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */,
 				048D50C62C451B4200A60AC0 /* PopUp.swift in Sources */,
-				9035808A2C4510E900F0D2CD /* CameraView.swift in Sources */,
+				AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
