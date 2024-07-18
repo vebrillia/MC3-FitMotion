@@ -2,12 +2,14 @@
 import SwiftUI
 
 struct CameraView: UIViewControllerRepresentable {
+    @Bindable var viewModel: CameraViewModel
+    
     func makeUIViewController(context: Context) -> CameraViewController {
-        return CameraViewController()
+        let viewController = CameraViewController()
+        viewController.cameraViewModel = viewModel
+        return viewController
     }
     
-    func updateUIViewController(_ uiViewController: CameraViewController, context: Context) {
-        // Update the view controller if needed
+    func updateUIViewController(_ viewController: CameraViewController, context: Context) {
     }
-    
 }

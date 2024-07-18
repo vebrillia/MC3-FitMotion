@@ -9,8 +9,10 @@ import SwiftUI
 
 
 struct ContentView: View {
+    @State var cameraViewModel = CameraViewModel()
+    
     var body: some View {
-        CameraView()
+        CameraView(viewModel: cameraViewModel)
             .edgesIgnoringSafeArea(.all)
     }
 }

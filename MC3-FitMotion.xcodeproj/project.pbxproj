@@ -326,7 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
+				DEVELOPMENT_TEAM = TCTRPSM3Y8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
@@ -356,7 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
+				DEVELOPMENT_TEAM = TCTRPSM3Y8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
