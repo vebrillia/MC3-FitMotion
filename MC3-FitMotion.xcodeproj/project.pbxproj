@@ -10,7 +10,10 @@
 		048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */; };
 		048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B52C43BE9C00A60AC0 /* Assets.xcassets */; };
 		048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */; };
-		048D50C62C451B4200A60AC0 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50C52C451B4200A60AC0 /* PopUp.swift */; };
+		04A226EA2C4903CD007CB9E8 /* DonePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226E92C4903CD007CB9E8 /* DonePage.swift */; };
+		04A226EC2C4903EA007CB9E8 /* PulseIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226EB2C4903EA007CB9E8 /* PulseIndicator.swift */; };
+		04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */; };
+		04A226F02C490421007CB9E8 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226EF2C490421007CB9E8 /* PopUp.swift */; };
 		9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035808D2C47AD8F00F0D2CD /* TimerView.swift */; };
 		AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E42C47DFB5003FB64E /* CameraView.swift */; };
 		AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */; };
@@ -25,7 +28,10 @@
 		048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_FitMotionApp.swift; sourceTree = "<group>"; };
 		048D50B52C43BE9C00A60AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		048D50C52C451B4200A60AC0 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
+		04A226E92C4903CD007CB9E8 /* DonePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePage.swift; sourceTree = "<group>"; };
+		04A226EB2C4903EA007CB9E8 /* PulseIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseIndicator.swift; sourceTree = "<group>"; };
+		04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepCounterOvl.swift; sourceTree = "<group>"; };
+		04A226EF2C490421007CB9E8 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		9035808D2C47AD8F00F0D2CD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
@@ -71,7 +77,6 @@
 				AAFD67EC2C47DFCE003FB64E /* View Model */,
 				AAFD67EA2C47DFB9003FB64E /* Model */,
 				048D50B72C43BE9C00A60AC0 /* Preview Content */,
-				9035808D2C47AD8F00F0D2CD /* TimerView.swift */,
 			);
 			path = "MC3-FitMotion";
 			sourceTree = "<group>";
@@ -96,9 +101,13 @@
 		AAFD67EB2C47DFC6003FB64E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AAFD67ED2C47DFEC003FB64E /* Component */,
 				AAFD67EE2C47E002003FB64E /* ContentView.swift */,
 				AAFD67E42C47DFB5003FB64E /* CameraView.swift */,
+				9035808D2C47AD8F00F0D2CD /* TimerView.swift */,
+				04A226E92C4903CD007CB9E8 /* DonePage.swift */,
+				04A226EB2C4903EA007CB9E8 /* PulseIndicator.swift */,
+				04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */,
+				04A226EF2C490421007CB9E8 /* PopUp.swift */,
 			);
 			name = View;
 			path = Model;
@@ -112,14 +121,6 @@
 			);
 			name = "View Model";
 			path = Model;
-			sourceTree = "<group>";
-		};
-		AAFD67ED2C47DFEC003FB64E /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				048D50C52C451B4200A60AC0 /* PopUp.swift */,
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,14 +193,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A226EA2C4903CD007CB9E8 /* DonePage.swift in Sources */,
 				9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */,
 				AAFD67F92C48F018003FB64E /* BicepCurl.mlmodel in Sources */,
 				AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */,
 				AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */,
 				AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */,
-				048D50C62C451B4200A60AC0 /* PopUp.swift in Sources */,
+				04A226EC2C4903EA007CB9E8 /* PulseIndicator.swift in Sources */,
+				04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */,
 				AAFD67F72C48EFC3003FB64E /* Predictor.swift in Sources */,
+				04A226F02C490421007CB9E8 /* PopUp.swift in Sources */,
 				AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

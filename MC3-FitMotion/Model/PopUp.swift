@@ -86,3 +86,4 @@ struct PopUpGuide_Previews: PreviewProvider {
 //    }
 //    .edgesIgnoringSafeArea(.all)
 //} .swipableAlert(isPresented: $showAlert)
+
