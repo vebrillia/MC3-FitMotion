@@ -16,6 +16,8 @@
 		AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */; };
 		AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */; };
 		AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67EE2C47E002003FB64E /* ContentView.swift */; };
+		AAFD67F72C48EFC3003FB64E /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67F62C48EFC3003FB64E /* Predictor.swift */; };
+		AAFD67F92C48F018003FB64E /* BicepCurl.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67F82C48F018003FB64E /* BicepCurl.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		AAFD67EE2C47E002003FB64E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAFD67F62C48EFC3003FB64E /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		AAFD67F82C48F018003FB64E /* BicepCurl.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BicepCurl.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 		AAFD67EA2C47DFB9003FB64E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AAFD67F82C48F018003FB64E /* BicepCurl.mlmodel */,
+				AAFD67F62C48EFC3003FB64E /* Predictor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,10 +194,12 @@
 			files = (
 				9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */,
+				AAFD67F92C48F018003FB64E /* BicepCurl.mlmodel in Sources */,
 				AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */,
 				AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */,
 				AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */,
 				048D50C62C451B4200A60AC0 /* PopUp.swift in Sources */,
+				AAFD67F72C48EFC3003FB64E /* Predictor.swift in Sources */,
 				AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

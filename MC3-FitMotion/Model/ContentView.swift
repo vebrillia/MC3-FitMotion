@@ -1,19 +1,31 @@
 //
 //  ContentView.swift
-//  MC3-FitMotion
+//  ActionClassifierSwiftUI
 //
-//  Created by Citta Catherine Gozali on 14/07/24.
+//  Created by Kristanto Sean on 18/07/24.
 //
 
 import SwiftUI
 
-
 struct ContentView: View {
+    
     @State var cameraViewModel = CameraViewModel()
     
     var body: some View {
-        CameraView(viewModel: cameraViewModel)
-            .edgesIgnoringSafeArea(.all)
+        ZStack {
+            CameraPreview(viewModel: cameraViewModel)
+            
+            VStack {
+                Spacer()
+                VStack {
+                    Text(cameraViewModel.label)
+                    Text("\(cameraViewModel.confidence)")
+                }.padding()
+                    .background(.yellow)
+            }
+        }
+        .background(.purple)
+        .ignoresSafeArea()
     }
 }
 
