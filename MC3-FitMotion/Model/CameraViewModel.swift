@@ -1,12 +1,15 @@
 
 import AVFoundation
+import Vision
 
+@Observable
 class CameraViewModel: NSObject {
-    
+
     var captureSession: AVCaptureSession?
     private var videoInput: AVCaptureDeviceInput?
     private var videoOutput: AVCaptureVideoDataOutput?
     private var videoCaptureDevice: AVCaptureDevice?
+    private var request: VNDetectHumanBodyPoseRequest?
     
     override init() {
         super.init()
@@ -14,6 +17,7 @@ class CameraViewModel: NSObject {
         configureCaptureDevice()
         configureVideoInput()
         configureVideoOutput()
+        setupVisionRequest()
         captureSession?.startRunning()
     }
     
@@ -58,12 +62,28 @@ class CameraViewModel: NSObject {
             print("Could not add video output to session.")
         }
     }
+    
+    // MARK: - Setup Vision Request
+    private func setupVisionRequest() {
+        request = VNDetectHumanBodyPoseRequest()
+    }
 }
 
 extension CameraViewModel: AVCaptureVideoDataOutputSampleBufferDelegate {
-    func captureOutput(_ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        let videoData = sampleBuffer
-        print(videoData)
-        print("AAAA")
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+        
+        guard let request = request else {
+            print("Request is not initialized")
+            return
+        }
+
+        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
+        do {
+            print("Performing body pose")
+            try handler.perform([request])
+        } catch {
+            print("Failed to perform body pose request: \(error)")
+        }
     }
 }
