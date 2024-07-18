@@ -36,6 +36,8 @@ struct SetRepCounterOvl: View {//nanti diganti ke viewmodif
                     }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)//Ini code untuk shadow
                     
                     VStack{
+                        Spacer ()
+                            .frame(height:10)
                         HStack (spacing:7){
                             ForEach(0..<totalset, id: \.self) { numberSet in
                                 RoundedRectangle(cornerRadius: 20)
@@ -44,16 +46,7 @@ struct SetRepCounterOvl: View {//nanti diganti ke viewmodif
                             }
                         }.padding(.horizontal)
                             .padding(.bottom, 5)//Ini code untuk garis
-                        //                        HStack {
-                        //                            Text("**\(rep) of \(totalrep)**\nReps")
-                        //                                .frame(maxWidth: .infinity)
-                        //                                .multilineTextAlignment(.center)
-                        //                                .foregroundColor( Color("Cream"))
-                        //                                .font(.system(size: 15))
-                        //                                .fontWeight(.semibold)
-                        //
-                        //                            Spacer()
-                        //                                .frame(maxWidth: .infinity )
+                        
                         VStack{
                             Text("**\(set) of \(totalset)**")
                                 .frame(maxWidth: .infinity)

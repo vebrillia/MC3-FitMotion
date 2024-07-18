@@ -32,7 +32,7 @@ struct DonePage: View {
                         .padding()
                     HStack{
                         VStack{
-                            Text("Repetisi")
+                            Text("Rep")
                                 .foregroundColor(Color("CustGray"))
                                 .font(.system(size: 16))
                                 .fontWeight(.light)
@@ -40,10 +40,38 @@ struct DonePage: View {
                                 .foregroundColor(Color("Tosca"))
                                 .font(.system(size: 64))
                                 .fontWeight(.bold)
-                        }
-                    }
-                    Text("\(totalrep)")
-                    Text("\(totalset)")
+                        }.frame(maxWidth:.infinity)
+                            .padding(.leading,5)
+                        Circle()
+                            .frame(width: 5, height: 5)
+                            .foregroundColor(Color("CustGray"))
+                        VStack{
+                            Text("Set")
+                                .foregroundColor(Color("CustGray"))
+                                .font(.system(size: 16))
+                                .fontWeight(.light)
+                            Text("\(totalset)")
+                                .foregroundColor(Color("Orange"))
+                                .font(.system(size: 64))
+                                .fontWeight(.bold)
+                        }.frame(maxWidth:.infinity)
+                            .padding(.leading,5)
+                    }.frame(width:200)
+                }//End of lingkaran di tengah
+                
+                Text("Terus semangat! Konsisten berlatih untuk mendapatkan hasil maksimal.")
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color("CustGray"))
+                    .font(.system(size: 14))
+                    .frame(width:350)
+                Spacer().frame(height:100)
+                Button(action: {
+                    //Back to beginning
+                }) {
+            RoundedRectangle(cornerRadius: 20)
+                        .fill(Color("Tosca"))
+                        .overlay(Text("Selesai").foregroundColor(.white))
+                        .frame(width:120,height:40)
                 }
             }
             
@@ -62,7 +90,7 @@ struct DonePage: View {
     private var dashRep: [CGFloat] {
         let circumference = CGFloat.pi * 300
         let gapLength: CGFloat = 25//masih salah nanti harus diperbaiki
-               let dashLength = (circumference - (CGFloat(totalrep)+1) * gapLength) / CGFloat(totalrep)  // Dash length to fit the circumference
+        let dashLength = (circumference - (CGFloat(totalrep)+1) * gapLength) / CGFloat(totalrep)  // Dash length to fit the circumference
         return Array(repeating: [dashLength,gapLength], count: totalrep).flatMap {$0}
     }
 }
