@@ -1,104 +1,86 @@
+//
+//  CameraViewController.swift
+//  ActionClassifierSwiftUI
+//
+//  Created by Kristanto Sean on 18/07/24.
+//
 
-import AVFoundation
 import UIKit
-import Vision
+import SwiftUI
+import AVFoundation
 
 class CameraViewController: UIViewController {
-    var cameraViewModel = CameraViewModel()
-    var previewLayer: AVCaptureVideoPreviewLayer?
-    var request: VNDetectHumanBodyPoseRequest?
     
-    let drawingLayer = CAShapeLayer()
+    var videoViewModel: CameraViewModel! = nil
+    
+    var previewLayer: AVCaptureVideoPreviewLayer?
+    
+    var pointsLayer = CAShapeLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupVideoPreview()
-        configureVision()
-        setupDrawingLayer()
-        print("View Load")
+        
+        videoViewModel.predictor.delegate = self
     }
     
     private func setupVideoPreview() {
-        previewLayer = AVCaptureVideoPreviewLayer(session: cameraViewModel.captureSession!)
-        previewLayer?.frame.size = view.frame.size
-        self.view.layer.addSublayer(previewLayer!)
-    }
-    
-    
-    // MARK: - Configure Vision
-    private func configureVision() {
-        request = VNDetectHumanBodyPoseRequest(completionHandler: bodyPoseHandler)
-    }
-    
-    // MARK: - Handler for detected points
-    func bodyPoseHandler(request: VNRequest, error: Error?) {
-        print("Handle body pose")
-        guard let observations = request.results as? [VNHumanBodyPoseObservation] else { return }
+        videoViewModel.startCaptureSession()
+        previewLayer = AVCaptureVideoPreviewLayer(session: videoViewModel.captureSession)
         
-        DispatchQueue.main.async {
-            self.drawingLayer.sublayers?.forEach { $0.removeFromSuperlayer() }
-            print(observations)
-            
-            print("Observed")
-            
-            for observation in observations {
-                self.processObservation(observation)
-            }
-        }
-    }
-    
-    
-    // MARK: - Setup drawing layer
-    func setupDrawingLayer() {
-        print("Drawing Layer")
-        self.view.layer.addSublayer(drawingLayer)
-        drawingLayer.frame = view.frame
-        drawingLayer.fillColor = UIColor.red.cgColor
-        drawingLayer.lineWidth = 2.0
-    }
-    
-    
-    // MARK: - Handler for detected points
-    func processObservation(_ observation: VNHumanBodyPoseObservation) {
-        do {
-            let recognizedPoints = try observation.recognizedPoints(forGroupKey: .all)
-
-            let displayedPoints = recognizedPoints.map {
-                CGPoint(x: $0.value.x, y: 1 - $0.value.y)
-            }
-            
-            print("Detected Point")
-
-//            delegate?.predictor(self, didFindNewRecognizedPoints: displayedPoints)
-        } catch {
-            print("Error finding recognized points: \(error)")
-        }
-    }
-    
-    func createDot(at point: CGPoint) -> CAShapeLayer {
-        let dotLayer = CAShapeLayer()
-        let dotPath = UIBezierPath(arcCenter: point, radius: CGFloat(10), startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
-        dotLayer.path = dotPath.cgPath
-        dotLayer.fillColor = UIColor.green.cgColor
-        return dotLayer
-    }
-
-    func drawLines(between points: [CGPoint]) {
-        guard points.count > 1 else { return }
-
-        let linePath = UIBezierPath()
-        for (index, point) in points.enumerated() {
-            if index == 0 {
-                linePath.move(to: point)
-            } else {
-                linePath.addLine(to: point)
-            }
-        }
-
-        let lineLayer = CAShapeLayer()
-        lineLayer.path = linePath.cgPath
-        lineLayer.fillColor = UIColor.green.cgColor
-        lineLayer.lineWidth = CGFloat(10)
-        drawingLayer.addSublayer(lineLayer)
+        guard let previewLayer = previewLayer else { return }
+        
+        view.layer.addSublayer(previewLayer)
+        previewLayer.frame = view.frame
+        
+        view.layer.addSublayer(pointsLayer)
+        pointsLayer.frame = view.frame
+        pointsLayer.strokeColor = UIColor.green.cgColor
     }
 }
+
+extension CameraViewController: PredictorDelegate {
+
+    func predictor(_ predictor: Predictor, didFindNewRecognizedPoints points: [CGPoint]) {
+        guard let previewLayer = previewLayer else { return }
+        
+        // convert to preview layer coordinates
+        let convertedPoints = points.map {
+            previewLayer.layerPointConverted(fromCaptureDevicePoint: $0)
+        }
+        
+        let combinedPath = CGMutablePath()
+        
+        for point in convertedPoints {
+            let dotPath = UIBezierPath(ovalIn: CGRect(x: point.x, y: point.y, width: 10, height: 10))
+            combinedPath.addPath(dotPath.cgPath)
+        }
+        
+        // set points layer path so that everytime we get new update, the path updates
+        pointsLayer.path = combinedPath
+        
+        DispatchQueue.main.async {
+            self.pointsLayer.didChangeValue(for: \.path)
+        }
+    }
+    
+    func predictor(_ predictor: Predictor, didLabelAction action: String, with confidence: Double) {
+        videoViewModel.label = action
+        videoViewModel.confidence = confidence
+    }
+}
+
+struct CameraPreview: UIViewControllerRepresentable {
+    @Bindable var viewModel: CameraViewModel
+    
+    func makeUIViewController(context: Context) -> CameraViewController {
+        let viewController = CameraViewController()
+        viewController.videoViewModel = viewModel
+        return viewController
+    }
+    
+    func updateUIViewController(_ viewController: CameraViewController, context: Context) {
+    }
+}
+
