@@ -1,9 +1,4 @@
-//
-//  CameraViewModel.swift
-//  ActionClassifierSwiftUI
-//
-//  Created by Kristanto Sean on 18/07/24.
-//
+
 
 import Foundation
 import AVFoundation

@@ -43,12 +43,12 @@ struct pulseIndicator : View {
 //       return sizeStatus}
     
     func pulseColor(_ poseStatus: String) -> Color { //nanti untuk kirim data dari ML pose bener atau ngga
-        if poseStatus == "right" {
+        if poseStatus == "Benar" {
             return Color.green
-        } else if poseStatus == "wrong" {
+        } else if poseStatus == "Salah" {
             return Color.red
         } else {
-            return (Color("CustGray"))
+            return (Color.gray)
         }
     }
     
