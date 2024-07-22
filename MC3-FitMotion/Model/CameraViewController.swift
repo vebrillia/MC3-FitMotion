@@ -31,7 +31,7 @@ class CameraViewController: UIViewController {
         view.layer.addSublayer(previewLayer)
         pointsLayer.frame = view.bounds
         
-        pointsLayer.strokeColor = UIColor.tosca.cgColor
+        pointsLayer.strokeColor = UIColor.custTosca.cgColor
         view.layer.addSublayer(pointsLayer)
     }
 }

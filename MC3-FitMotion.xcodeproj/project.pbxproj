@@ -15,6 +15,11 @@
 		04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */; };
 		04A226F02C490421007CB9E8 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226EF2C490421007CB9E8 /* PopUp.swift */; };
 		9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035808D2C47AD8F00F0D2CD /* TimerView.swift */; };
+		AA1CEF592C4E5A2B006E6DE4 /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF582C4E5A2B006E6DE4 /* WorkoutsView.swift */; };
+		AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */; };
+		AA1CEF602C4E6068006E6DE4 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */; };
+		AA1CEF622C4E6776006E6DE4 /* WorkoutListLocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */; };
+		AA1CEF642C4E6C1C006E6DE4 /* PreWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */; };
 		AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E42C47DFB5003FB64E /* CameraView.swift */; };
 		AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */; };
 		AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */; };
@@ -33,6 +38,11 @@
 		04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepCounterOvl.swift; sourceTree = "<group>"; };
 		04A226EF2C490421007CB9E8 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		9035808D2C47AD8F00F0D2CD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		AA1CEF582C4E5A2B006E6DE4 /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
+		AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
+		AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListLocked.swift; sourceTree = "<group>"; };
+		AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreWorkoutView.swift; sourceTree = "<group>"; };
 		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +99,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AA1CEF5C2C4E5B1E006E6DE4 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */,
+				AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */,
+				AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		AAFD67EA2C47DFB9003FB64E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +121,10 @@
 		AAFD67EB2C47DFC6003FB64E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AA1CEF5C2C4E5B1E006E6DE4 /* Component */,
 				AAFD67EE2C47E002003FB64E /* ContentView.swift */,
+				AA1CEF582C4E5A2B006E6DE4 /* WorkoutsView.swift */,
+				AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */,
 				AAFD67E42C47DFB5003FB64E /* CameraView.swift */,
 				9035808D2C47AD8F00F0D2CD /* TimerView.swift */,
 				04A226E92C4903CD007CB9E8 /* DonePage.swift */,
@@ -194,14 +217,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A226EA2C4903CD007CB9E8 /* DonePage.swift in Sources */,
+				AA1CEF642C4E6C1C006E6DE4 /* PreWorkoutView.swift in Sources */,
 				9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */,
 				AAFD67F92C48F018003FB64E /* BicepCurl.mlmodel in Sources */,
 				AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */,
+				AA1CEF602C4E6068006E6DE4 /* NavigationBar.swift in Sources */,
 				AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */,
 				AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */,
 				04A226EC2C4903EA007CB9E8 /* PulseIndicator.swift in Sources */,
 				04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */,
+				AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */,
+				AA1CEF622C4E6776006E6DE4 /* WorkoutListLocked.swift in Sources */,
+				AA1CEF592C4E5A2B006E6DE4 /* WorkoutsView.swift in Sources */,
 				AAFD67F72C48EFC3003FB64E /* Predictor.swift in Sources */,
 				04A226F02C490421007CB9E8 /* PopUp.swift in Sources */,
 				AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */,
