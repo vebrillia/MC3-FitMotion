@@ -10,8 +10,10 @@
 //import SDWebImageSwiftUI
 
 import SwiftUI
+import AVFoundation
 
 struct PopUpGuide: ViewModifier {
+    @StateObject var audioManager = AudioManager()
     @Binding var isPresented: Bool
     @State var buttonAvail: Bool = false
     
@@ -76,6 +78,7 @@ struct PopUpGuide: ViewModifier {
                         if buttonAvail {
                             isPresented = false
                         }
+                        audioManager.playSoundEffect(named: "ArahanKameraAudio")
                     }) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
