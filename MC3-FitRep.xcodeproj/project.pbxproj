@@ -34,7 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		048D50AE2C43BE9A00A60AC0 /* MC3-FitMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-FitMotion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		048D50AE2C43BE9A00A60AC0 /* MC3-FitRep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-FitRep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_FitMotionApp.swift; sourceTree = "<group>"; };
 		048D50B52C43BE9C00A60AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		048D50AF2C43BE9A00A60AC0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				048D50AE2C43BE9A00A60AC0 /* MC3-FitMotion.app */,
+				048D50AE2C43BE9A00A60AC0 /* MC3-FitRep.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,9 +172,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		048D50AD2C43BE9A00A60AC0 /* MC3-FitMotion */ = {
+		048D50AD2C43BE9A00A60AC0 /* MC3-FitRep */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 048D50BC2C43BE9C00A60AC0 /* Build configuration list for PBXNativeTarget "MC3-FitMotion" */;
+			buildConfigurationList = 048D50BC2C43BE9C00A60AC0 /* Build configuration list for PBXNativeTarget "MC3-FitRep" */;
 			buildPhases = (
 				048D50AA2C43BE9A00A60AC0 /* Sources */,
 				048D50AB2C43BE9A00A60AC0 /* Frameworks */,
@@ -184,9 +184,9 @@
 			);
 			dependencies = (
 			);
-			name = "MC3-FitMotion";
+			name = "MC3-FitRep";
 			productName = "MC3-FitMotion";
-			productReference = 048D50AE2C43BE9A00A60AC0 /* MC3-FitMotion.app */;
+			productReference = 048D50AE2C43BE9A00A60AC0 /* MC3-FitRep.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 048D50A92C43BE9A00A60AC0 /* Build configuration list for PBXProject "MC3-FitMotion" */;
+			buildConfigurationList = 048D50A92C43BE9A00A60AC0 /* Build configuration list for PBXProject "MC3-FitRep" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -217,7 +217,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				048D50AD2C43BE9A00A60AC0 /* MC3-FitMotion */,
+				048D50AD2C43BE9A00A60AC0 /* MC3-FitRep */,
 			);
 		};
 /* End PBXProject section */
@@ -393,7 +393,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitRep/Preview Content\"";
 				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -428,7 +428,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitRep/Preview Content\"";
 				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -459,7 +459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		048D50A92C43BE9A00A60AC0 /* Build configuration list for PBXProject "MC3-FitMotion" */ = {
+		048D50A92C43BE9A00A60AC0 /* Build configuration list for PBXProject "MC3-FitRep" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				048D50BA2C43BE9C00A60AC0 /* Debug */,
@@ -468,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		048D50BC2C43BE9C00A60AC0 /* Build configuration list for PBXNativeTarget "MC3-FitMotion" */ = {
+		048D50BC2C43BE9C00A60AC0 /* Build configuration list for PBXNativeTarget "MC3-FitRep" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				048D50BD2C43BE9C00A60AC0 /* Debug */,

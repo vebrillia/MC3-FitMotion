@@ -18,6 +18,7 @@ struct NavigationBar: View {
         VStack {
             HStack {
                 Text(title)
+                    .frame(height: 32)
                     .foregroundStyle(Color.custBlack)
                     .font(.largeTitle)
                     .bold()
@@ -46,7 +47,7 @@ struct NavigationBar: View {
             HStack {
                 Text(subtitle)
                     .foregroundStyle(Color.custGray)
-                    .frame(height: 0)
+                    .frame(height: 8)
                 Spacer()
             }
         }
