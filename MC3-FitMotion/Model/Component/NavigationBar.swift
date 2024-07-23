@@ -25,6 +25,10 @@ struct NavigationBar: View {
                 Spacer()
             }
         }
-        .padding()
+        .padding(.horizontal)
     }
+}
+
+#Preview {
+    NavigationBar(title: "Workouts", subtitle: "Let's workout!")
 }
