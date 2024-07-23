@@ -1,9 +1,3 @@
-//
-//  CameraViewController.swift
-//  ActionClassifierSwiftUI
-//
-//  Created by Kristanto Sean on 18/07/24.
-//
 
 import UIKit
 import SwiftUI
@@ -31,12 +25,14 @@ class CameraViewController: UIViewController {
         
         guard let previewLayer = previewLayer else { return }
         
-        view.layer.addSublayer(previewLayer)
-        previewLayer.frame = view.frame
+        previewLayer.videoGravity = .resizeAspectFill
+        previewLayer.frame = UIScreen.main.bounds
         
+        view.layer.addSublayer(previewLayer)
+        pointsLayer.frame = view.bounds
+        
+        pointsLayer.strokeColor = UIColor.black.cgColor
         view.layer.addSublayer(pointsLayer)
-        pointsLayer.frame = view.frame
-        pointsLayer.strokeColor = UIColor.green.cgColor
     }
 }
 
@@ -62,6 +58,7 @@ extension CameraViewController: PredictorDelegate {
         
         DispatchQueue.main.async {
             self.pointsLayer.didChangeValue(for: \.path)
+            self.videoViewModel.recognizedPoints = convertedPoints
         }
     }
     
@@ -83,4 +80,3 @@ struct CameraPreview: UIViewControllerRepresentable {
     func updateUIViewController(_ viewController: CameraViewController, context: Context) {
     }
 }
-

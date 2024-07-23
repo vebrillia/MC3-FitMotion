@@ -17,6 +17,17 @@
 		04A226F22C4E5F44007CB9E8 /* Guidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226F12C4E5F44007CB9E8 /* Guidance.swift */; };
 		04B80D242C4FB4F5006FC5F7 /* bodyTutorial.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04B80D232C4FB4F5006FC5F7 /* bodyTutorial.gif */; };
 		9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035808D2C47AD8F00F0D2CD /* TimerView.swift */; };
+		9049D9B22C4F960800ABFCB4 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049D9B12C4F960800ABFCB4 /* AudioManager.swift */; };
+		9049D9B42C4F9ECF00ABFCB4 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049D9B32C4F9ECF00ABFCB4 /* ExerciseView.swift */; };
+		9049D9B62C4F9F2E00ABFCB4 /* CameraPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049D9B52C4F9F2E00ABFCB4 /* CameraPositionView.swift */; };
+		9049D9BA2C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */; };
+		9049D9BD2C4FA38600ABFCB4 /* CountDown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9049D9BC2C4FA38600ABFCB4 /* CountDown.mp3 */; };
+		9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */; };
+		AA1CEF592C4E5A2B006E6DE4 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */; };
+		AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */; };
+		AA1CEF602C4E6068006E6DE4 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */; };
+		AA1CEF622C4E6776006E6DE4 /* WorkoutListLocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */; };
+		AA1CEF642C4E6C1C006E6DE4 /* PreWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */; };
 		AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E42C47DFB5003FB64E /* CameraView.swift */; };
 		AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */; };
 		AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */; };
@@ -37,6 +48,17 @@
 		04A226F12C4E5F44007CB9E8 /* Guidance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidance.swift; sourceTree = "<group>"; };
 		04B80D232C4FB4F5006FC5F7 /* bodyTutorial.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bodyTutorial.gif; sourceTree = "<group>"; };
 		9035808D2C47AD8F00F0D2CD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		9049D9B12C4F960800ABFCB4 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		9049D9B32C4F9ECF00ABFCB4 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseView.swift; path = ../../ExerciseView.swift; sourceTree = "<group>"; };
+		9049D9B52C4F9F2E00ABFCB4 /* CameraPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraPositionView.swift; path = ../../CameraPositionView.swift; sourceTree = "<group>"; };
+		9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ArahanKameraAudio.mp3; sourceTree = "<group>"; };
+		9049D9BC2C4FA38600ABFCB4 /* CountDown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = CountDown.mp3; path = ../../../../soundeffects/CountDown.mp3; sourceTree = "<group>"; };
+		9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CountDown1Sec.mp3; sourceTree = "<group>"; };
+		AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
+		AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
+		AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListLocked.swift; sourceTree = "<group>"; };
+		AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreWorkoutView.swift; sourceTree = "<group>"; };
 		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +102,7 @@
 				AAFD67EB2C47DFC6003FB64E /* View */,
 				AAFD67EC2C47DFCE003FB64E /* View Model */,
 				AAFD67EA2C47DFB9003FB64E /* Model */,
+				9049D9BB2C4FA19100ABFCB4 /* Sound */,
 				048D50B72C43BE9C00A60AC0 /* Preview Content */,
 			);
 			path = "MC3-FitMotion";
@@ -94,11 +117,32 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9049D9BB2C4FA19100ABFCB4 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */,
+				9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */,
+				9049D9BC2C4FA38600ABFCB4 /* CountDown.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		AA1CEF5C2C4E5B1E006E6DE4 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */,
+				AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */,
+				AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		AAFD67EA2C47DFB9003FB64E /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				AAFD67F82C48F018003FB64E /* BicepCurl.mlmodel */,
 				AAFD67F62C48EFC3003FB64E /* Predictor.swift */,
+				9049D9B12C4F960800ABFCB4 /* AudioManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,8 +150,13 @@
 		AAFD67EB2C47DFC6003FB64E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AA1CEF5C2C4E5B1E006E6DE4 /* Component */,
 				AAFD67EE2C47E002003FB64E /* ContentView.swift */,
 				04A226F12C4E5F44007CB9E8 /* Guidance.swift */,
+				9049D9B52C4F9F2E00ABFCB4 /* CameraPositionView.swift */,
+				9049D9B32C4F9ECF00ABFCB4 /* ExerciseView.swift */,
+				AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */,
+				AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */,
 				AAFD67E42C47DFB5003FB64E /* CameraView.swift */,
 				9035808D2C47AD8F00F0D2CD /* TimerView.swift */,
 				04A226E92C4903CD007CB9E8 /* DonePage.swift */,
@@ -188,7 +237,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B80D242C4FB4F5006FC5F7 /* bodyTutorial.gif in Resources */,
+				9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */,
 				048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */,
+				9049D9BA2C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 in Resources */,
+				9049D9BD2C4FA38600ABFCB4 /* CountDown.mp3 in Resources */,
 				048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,15 +252,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9049D9B42C4F9ECF00ABFCB4 /* ExerciseView.swift in Sources */,
 				04A226EA2C4903CD007CB9E8 /* DonePage.swift in Sources */,
+				AA1CEF642C4E6C1C006E6DE4 /* PreWorkoutView.swift in Sources */,
 				9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */,
+				9049D9B62C4F9F2E00ABFCB4 /* CameraPositionView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */,
 				AAFD67F92C48F018003FB64E /* BicepCurl.mlmodel in Sources */,
 				AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */,
+				9049D9B22C4F960800ABFCB4 /* AudioManager.swift in Sources */,
+				AA1CEF602C4E6068006E6DE4 /* NavigationBar.swift in Sources */,
 				AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */,
 				AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */,
 				04A226EC2C4903EA007CB9E8 /* PulseIndicator.swift in Sources */,
 				04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */,
+				AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */,
+				AA1CEF622C4E6776006E6DE4 /* WorkoutListLocked.swift in Sources */,
+				AA1CEF592C4E5A2B006E6DE4 /* WorkoutListView.swift in Sources */,
 				AAFD67F72C48EFC3003FB64E /* Predictor.swift in Sources */,
 				04A226F22C4E5F44007CB9E8 /* Guidance.swift in Sources */,
 				04A226F02C490421007CB9E8 /* PopUp.swift in Sources */,
@@ -350,6 +410,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need your permission to use the microphone";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We need your permission to use speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -380,6 +442,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need your permission to use the microphone";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We need your permission to use speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

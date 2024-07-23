@@ -1,9 +1,4 @@
-//
-//  CameraViewModel.swift
-//  ActionClassifierSwiftUI
-//
-//  Created by Kristanto Sean on 18/07/24.
-//
+
 
 import Foundation
 import AVFoundation
@@ -19,6 +14,8 @@ class CameraViewModel: NSObject {
     
     var label = "Label"
     var confidence: Double = 0.0
+    
+    var recognizedPoints: [CGPoint] = []
     
     override init() {
         super.init()
