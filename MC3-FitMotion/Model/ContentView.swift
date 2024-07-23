@@ -5,11 +5,11 @@ struct ContentView: View {
     @State private var isPopupPresented = true
     var body: some View {
        
-        
-        ZStack{
-            WorkoutsListView()
-        }
-        .swipableAlert(isPresented: $isPopupPresented)
+       CameraPositionView()
+//        ZStack{
+//            WorkoutsListView()
+//        }
+//        .swipableAlert(isPresented: $isPopupPresented)
     }
         
 }

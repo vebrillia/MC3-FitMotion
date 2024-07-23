@@ -31,7 +31,7 @@ class CameraViewController: UIViewController {
         view.layer.addSublayer(previewLayer)
         pointsLayer.frame = view.bounds
         
-        pointsLayer.strokeColor = UIColor.custTosca.cgColor
+        pointsLayer.strokeColor = UIColor.black.cgColor
         view.layer.addSublayer(pointsLayer)
     }
 }
@@ -58,6 +58,7 @@ extension CameraViewController: PredictorDelegate {
         
         DispatchQueue.main.async {
             self.pointsLayer.didChangeValue(for: \.path)
+            self.videoViewModel.recognizedPoints = convertedPoints
         }
     }
     
@@ -79,4 +80,3 @@ struct CameraPreview: UIViewControllerRepresentable {
     func updateUIViewController(_ viewController: CameraViewController, context: Context) {
     }
 }
-
