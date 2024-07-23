@@ -15,6 +15,8 @@ class CameraViewModel: NSObject {
     var label = "Label"
     var confidence: Double = 0.0
     
+    var recognizedPoints: [CGPoint] = []
+    
     override init() {
         super.init()
         guard let captureDevice = AVCaptureDevice.default(for: .video),

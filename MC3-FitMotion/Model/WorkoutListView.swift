@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct WorkoutsView: View {
+struct WorkoutsListView: View {
     var body: some View {
         NavigationStack {
             VStack {
@@ -20,5 +20,5 @@ struct WorkoutsView: View {
 }
 
 #Preview {
-    WorkoutsView()
+    WorkoutsListView()
 }
