@@ -23,8 +23,6 @@ struct ContentView: View {
                 }.padding()
                     .background(.yellow)
             }
-            
-            SetRepCounterOvl()
         }
         .background(.purple)
         .ignoresSafeArea()
