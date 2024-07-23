@@ -1,7 +1,16 @@
+//
+//  ContentView.swift
+//  ActionClassifierSwiftUI
+//
+//  Created by Kristanto Sean on 18/07/24.
+//
 
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var cameraViewModel = CameraViewModel()
+    
     var body: some View {
         ZStack {
             CameraPreview(viewModel: cameraViewModel)
@@ -18,7 +27,6 @@ struct ContentView: View {
         .background(.purple)
         .ignoresSafeArea()
     }
-        
 }
 
 #Preview {
