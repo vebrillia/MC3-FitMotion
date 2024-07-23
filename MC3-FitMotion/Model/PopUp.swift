@@ -96,7 +96,6 @@ struct PopUpGuide: ViewModifier {
                 }
                 .frame(width: 300, height: 350)
                 .padding()
-                .background(Color("Cream"))
                 .background(Color.custWhite)
                 .cornerRadius(10)
                 .shadow(radius: 10)
