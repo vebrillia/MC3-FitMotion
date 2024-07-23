@@ -40,6 +40,7 @@
 		9049D9B42C4F9ECF00ABFCB4 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049D9B32C4F9ECF00ABFCB4 /* ExerciseView.swift */; };
 		9049D9B62C4F9F2E00ABFCB4 /* CameraPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049D9B52C4F9F2E00ABFCB4 /* CameraPositionView.swift */; };
 		9049D9BA2C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */; };
+		9049D9BD2C4FA38600ABFCB4 /* CountDown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9049D9BC2C4FA38600ABFCB4 /* CountDown.mp3 */; };
 		9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */; };
 		AA1CEF592C4E5A2B006E6DE4 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */; };
 		AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */; };
@@ -87,6 +88,7 @@
 		9049D9B32C4F9ECF00ABFCB4 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseView.swift; path = ../../ExerciseView.swift; sourceTree = "<group>"; };
 		9049D9B52C4F9F2E00ABFCB4 /* CameraPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraPositionView.swift; path = ../../CameraPositionView.swift; sourceTree = "<group>"; };
 		9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ArahanKameraAudio.mp3; sourceTree = "<group>"; };
+		9049D9BC2C4FA38600ABFCB4 /* CountDown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = CountDown.mp3; path = ../../../../soundeffects/CountDown.mp3; sourceTree = "<group>"; };
 		9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CountDown1Sec.mp3; sourceTree = "<group>"; };
 		AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
 		AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
@@ -113,7 +115,6 @@
 		048D50A52C43BE9A00A60AC0 = {
 			isa = PBXGroup;
 			children = (
-				9049D9B12C4F960800ABFCB4 /* AudioManager.swift */,
 				048D50B02C43BE9A00A60AC0 /* MC3-FitMotion */,
 				048D50AF2C43BE9A00A60AC0 /* Products */,
 			);
@@ -202,6 +203,14 @@
 				28E3FA9D2C4FB01C00A7B471 /* Pose+Landmark.swift */,
 			);
 			path = Pose;
+		9049D9BB2C4FA19100ABFCB4 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */,
+				9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */,
+				9049D9BC2C4FA38600ABFCB4 /* CountDown.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 		AA1CEF5C2C4E5B1E006E6DE4 /* Component */ = {
@@ -319,6 +328,10 @@
 				9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */,
 				048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */,
 				9049D9BA2C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 in Resources */,
+				9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */,
+				048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */,
+				9049D9BA2C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 in Resources */,
+				9049D9BD2C4FA38600ABFCB4 /* CountDown.mp3 in Resources */,
 				048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
