@@ -113,6 +113,7 @@
 		048D50A52C43BE9A00A60AC0 = {
 			isa = PBXGroup;
 			children = (
+				9049D9B12C4F960800ABFCB4 /* AudioManager.swift */,
 				048D50B02C43BE9A00A60AC0 /* MC3-FitMotion */,
 				048D50AF2C43BE9A00A60AC0 /* Products */,
 			);
@@ -339,6 +340,7 @@
 				28E3FA872C4FAD2000A7B471 /* ActionPrediction.swift in Sources */,
 				AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */,
 				28E3FA942C4FAD7C00A7B471 /* AVCaptureDevice+FrameRate.swift in Sources */,
+				9049D9B22C4F960800ABFCB4 /* AudioManager.swift in Sources */,
 				AA1CEF602C4E6068006E6DE4 /* NavigationBar.swift in Sources */,
 				28E3FAA02C4FB01C00A7B471 /* Pose+Connection.swift in Sources */,
 				28E3FA8A2C4FAD2000A7B471 /* ExerciseClassifier+FrameRate.swift in Sources */,
@@ -500,6 +502,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
 				DEVELOPMENT_TEAM = 64N8G77AT7;
+				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
@@ -533,6 +536,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
 				DEVELOPMENT_TEAM = 64N8G77AT7;
+				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
