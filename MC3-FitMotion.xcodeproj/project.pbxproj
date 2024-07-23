@@ -15,7 +15,7 @@
 		04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */; };
 		04A226F02C490421007CB9E8 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226EF2C490421007CB9E8 /* PopUp.swift */; };
 		9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035808D2C47AD8F00F0D2CD /* TimerView.swift */; };
-		AA1CEF592C4E5A2B006E6DE4 /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF582C4E5A2B006E6DE4 /* WorkoutsView.swift */; };
+		AA1CEF592C4E5A2B006E6DE4 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */; };
 		AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */; };
 		AA1CEF602C4E6068006E6DE4 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */; };
 		AA1CEF622C4E6776006E6DE4 /* WorkoutListLocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */; };
@@ -38,7 +38,7 @@
 		04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepCounterOvl.swift; sourceTree = "<group>"; };
 		04A226EF2C490421007CB9E8 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		9035808D2C47AD8F00F0D2CD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		AA1CEF582C4E5A2B006E6DE4 /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
+		AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
 		AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
 		AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListLocked.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			children = (
 				AA1CEF5C2C4E5B1E006E6DE4 /* Component */,
 				AAFD67EE2C47E002003FB64E /* ContentView.swift */,
-				AA1CEF582C4E5A2B006E6DE4 /* WorkoutsView.swift */,
+				AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */,
 				AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */,
 				AAFD67E42C47DFB5003FB64E /* CameraView.swift */,
 				9035808D2C47AD8F00F0D2CD /* TimerView.swift */,
@@ -229,7 +229,7 @@
 				04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */,
 				AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */,
 				AA1CEF622C4E6776006E6DE4 /* WorkoutListLocked.swift in Sources */,
-				AA1CEF592C4E5A2B006E6DE4 /* WorkoutsView.swift in Sources */,
+				AA1CEF592C4E5A2B006E6DE4 /* WorkoutListView.swift in Sources */,
 				AAFD67F72C48EFC3003FB64E /* Predictor.swift in Sources */,
 				04A226F02C490421007CB9E8 /* PopUp.swift in Sources */,
 				AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */,
