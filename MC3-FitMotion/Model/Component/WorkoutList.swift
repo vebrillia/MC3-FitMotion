@@ -5,39 +5,40 @@ struct WorkoutList: View {
     let title: String
     let subtitle: String
     let image: String
-    let destination: AnyView
+    let action: () -> Void
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            NavigationLink(destination: self.destination) {
-                VStack {
+            VStack {
+                Spacer()
+                HStack {
+                    Text(title)
+                        .frame(maxHeight: 24)
+                        .font(.title2)
+                        .bold()
                     Spacer()
-                    HStack {
-                        Text(title)
-                            .frame(maxHeight: 24)
-                            .font(.title2)
-                            .bold()
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        Text(subtitle)
-                            .frame(maxHeight: 0)
-                            .font(.subheadline)
-                        
-                        Spacer()
-                        
-                        Image(systemName: "arrow.right")
-                            .frame(maxHeight: 0)
-                    }
-                    .padding(.bottom, 4)
                 }
-                .padding()
-                .frame(height: 100)
-                .background(Color.custTosca)
-                .foregroundStyle(Color.custWhite)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                .padding(.horizontal)
+                
+                HStack {
+                    Text(subtitle)
+                        .frame(maxHeight: 0)
+                        .font(.subheadline)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "arrow.right")
+                        .frame(maxHeight: 0)
+                }
+                .padding(.bottom, 4)
+            }
+            .padding()
+            .frame(height: 100)
+            .background(Color.custTosca)
+            .foregroundStyle(Color.custWhite)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .padding(.horizontal)
+            .onTapGesture {
+                action()
             }
             
             HStack {
@@ -58,6 +59,6 @@ struct WorkoutList: View {
     }
 }
 
-#Preview {
-    WorkoutList(title: "Workout", subtitle: "Subtitle", image: "BicepPerson", destination: AnyView(ContentView()))
-}
+//#Preview {
+//    WorkoutList(title: "Workout", subtitle: "Subtitle", image: "BicepPerson", destination: AnyView(ContentView()))
+//}
