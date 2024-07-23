@@ -3,18 +3,27 @@ import SwiftUI
 
 struct WorkoutListLocked: View {
     let title: String
+    let subtitle: String
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             VStack {
                 Spacer()
                 HStack {
                     Text(title)
-                        .font(.title)
+                        .frame(maxHeight: 24)
+                        .font(.title2)
                         .bold()
                     Spacer()
                 }
-                .padding()
+                
+                HStack {
+                    Text(subtitle)
+                        .frame(maxHeight: 0)
+                        .font(.subheadline)
+                    Spacer()
+                }
+                .padding(.bottom, 4)
             }
             .blur(radius: 3)
             
@@ -23,15 +32,16 @@ struct WorkoutListLocked: View {
                 .scaledToFit()
                 .frame(width: 28, height: 28)
         }
+        .padding()
         .frame(height: 100)
         .background(Color.custGray)
         .foregroundStyle(Color.custWhite)
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .padding(.horizontal)
-        .padding(.bottom, 4)
+        .frame(height: 100)
     }
 }
 
 #Preview {
-    WorkoutListLocked(title: "Workout")
+    WorkoutListLocked(title: "Workout", subtitle: "Subtitle")
 }
