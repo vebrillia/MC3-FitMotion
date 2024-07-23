@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */; };
+		048D50B22C43BE9A00A60AC0 /* MC3_FitRepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50B12C43BE9A00A60AC0 /* MC3_FitRepApp.swift */; };
 		048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B52C43BE9C00A60AC0 /* Assets.xcassets */; };
 		048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */; };
 		04A226EA2C4903CD007CB9E8 /* DonePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226E92C4903CD007CB9E8 /* DonePage.swift */; };
@@ -35,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		048D50AE2C43BE9A00A60AC0 /* MC3-FitRep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-FitRep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_FitMotionApp.swift; sourceTree = "<group>"; };
+		048D50B12C43BE9A00A60AC0 /* MC3_FitRepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_FitRepApp.swift; sourceTree = "<group>"; };
 		048D50B52C43BE9C00A60AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04A226E92C4903CD007CB9E8 /* DonePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePage.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		048D50B02C43BE9A00A60AC0 /* MC3-FitRep */ = {
 			isa = PBXGroup;
 			children = (
-				048D50B12C43BE9A00A60AC0 /* MC3_FitMotionApp.swift */,
+				048D50B12C43BE9A00A60AC0 /* MC3_FitRepApp.swift */,
 				048D50B52C43BE9C00A60AC0 /* Assets.xcassets */,
 				AAFD67EB2C47DFC6003FB64E /* View */,
 				AAFD67EC2C47DFCE003FB64E /* View Model */,
@@ -246,7 +246,7 @@
 				AA1CEF642C4E6C1C006E6DE4 /* PreWorkoutView.swift in Sources */,
 				9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */,
 				9049D9B62C4F9F2E00ABFCB4 /* CameraPositionView.swift in Sources */,
-				048D50B22C43BE9A00A60AC0 /* MC3_FitMotionApp.swift in Sources */,
+				048D50B22C43BE9A00A60AC0 /* MC3_FitRepApp.swift in Sources */,
 				AAFD67F92C48F018003FB64E /* BicepCurl.mlmodel in Sources */,
 				AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */,
 				9049D9B22C4F960800ABFCB4 /* AudioManager.swift in Sources */,

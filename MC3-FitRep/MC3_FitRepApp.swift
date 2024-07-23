@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct MC3_FitMotionApp: App {
+struct MC3_FitRepApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
