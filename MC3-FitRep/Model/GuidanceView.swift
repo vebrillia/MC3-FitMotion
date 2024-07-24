@@ -234,9 +234,7 @@ struct GuidanceView: View {
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .ignoresSafeArea()//Ini code untuk shadow
             
-            Button(action: {
-                //Back to beginning
-            }) {
+            NavigationLink(destination: BicepCurlView()) {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(Color("Orange"))
                     .overlay(Text("Mulai").foregroundColor(.white)
