@@ -4,8 +4,9 @@ import SwiftUI
 struct NavigationBar: View {
     private let title: String
     private let subtitle: String
-    private let rightButton: AnyView?
-    private let leftButton: AnyView?
+    
+    private let leftItem: AnyView = AnyView(EmptyView())
+    private let rightItem: AnyView = AnyView(EmptyView())
     
     @State private var isShowingPopover = false
     
@@ -18,7 +19,8 @@ struct NavigationBar: View {
         VStack {
             
             HStack {
-                
+                leftItem
+                rightItem
             }
             
             HStack {
@@ -42,5 +44,5 @@ struct NavigationBar: View {
 }
 
 #Preview {
-    NavigationBar(title: "Workouts", subtitle: "Let's workout!", image: "info.circle")
+    NavigationBar(title: "Workouts", subtitle: "Let's workout!")
 }
