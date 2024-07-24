@@ -15,7 +15,7 @@ class PredictionViewModel: ObservableObject {
     @Published var confidence: String = ""
     @Published var benarCount: Int = 0
     @Published var salahCount: Int = 0
-
+    var recognizedPoints: [CGPoint] = []
     
     // Properties to track "Benar" frames
     private var benarFrameCount: Int = 0
@@ -84,6 +84,11 @@ class PredictionViewModel: ObservableObject {
         DispatchQueue.main.async { self.confidence = confidenceString }
     }
     
+    func updateRecognizedPoints(with points: [CGPoint]) {
+        self.recognizedPoints = points
+        // Notify observers that recognized points have changed
+        self.objectWillChange.send()
+    }
     // Other methods...
 }
 
