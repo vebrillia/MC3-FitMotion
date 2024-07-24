@@ -28,7 +28,7 @@ struct GifImageView: UIViewRepresentable {
     }
 }
 
-struct Guidance: View {
+struct GuidanceView: View {
     @State var totalset: Int = 3
     @State var totalrep: Int = 12
     @State private var jenisWO: Int = 0
@@ -251,5 +251,5 @@ struct Guidance: View {
 }
 
 #Preview {
-    Guidance()
+    GuidanceView()
 }
