@@ -2,11 +2,12 @@
 import SwiftUI
 
 struct WorkoutsListView: View {
-    @State private var path: [Int] = []
+    @State private var isShowingPopover: Bool = false
+    
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack {
             VStack {
-                NavigationBar(title: "Workouts", subtitle: "Build your muscles!", image: "info.circle")
+                NavigationBar(title: "Workouts", subtitle: "Build your muscle", image: "info.circle")
                 
                 WorkoutList(title: "Bicep Curl", subtitle: "Arms", image: "BicepPerson", destination: AnyView(GuidanceView()))
                 WorkoutListLocked(title: "Push Up", subtitle: "Arms & Chest")
@@ -14,7 +15,7 @@ struct WorkoutsListView: View {
                 Spacer()
             }
             .background(Color.custWhite)
-            .navigationTitle("Workout List")
+            .navigationTitle("Workouts")
             .toolbar(.hidden)
         }
     }

@@ -39,12 +39,12 @@ struct GuidanceView: View {
     
     var body: some View {
         ZStack (alignment: .bottom){
-            Color("Cream").edgesIgnoringSafeArea(.all) //background
+            Color.custWhite.edgesIgnoringSafeArea(.all) //background
             VStack{
                 Text("Biceps Curl")
                     .font(.system(size: 34))
                     .fontWeight(.bold)
-                    .foregroundColor(Color("CustBlack"))
+                    .foregroundColor(Color.custBlack)
                     .frame(maxWidth:.infinity, alignment: .leading)
                 
                 
@@ -106,8 +106,8 @@ struct GuidanceView: View {
                                     //Back to beginning
                                 }) {
                                     RoundedRectangle(cornerRadius: 5)
-                                        .fill(totalset<=3 ? Color("CustGray") : Color("Orange"))
-                                        .overlay(Text("-").foregroundColor(Color("Cream")))
+                                        .fill(totalset<=3 ? Color.custGray : Color.custOrange)
+                                        .overlay(Text("-").foregroundColor(Color.custWhite))
                                         .frame(width:25,height:25)
                                 }//Button -
                                 
@@ -129,8 +129,8 @@ struct GuidanceView: View {
                                     //Back to beginning
                                 }) {
                                     RoundedRectangle(cornerRadius: 5)
-                                        .fill(totalset>=5 ? Color("CustGray") : Color("Orange"))
-                                        .overlay(Text("+").foregroundColor(Color("Cream")))
+                                        .fill(totalset>=5 ? Color.custGray : Color.custOrange)
+                                        .overlay(Text("+").foregroundColor(Color.custWhite))
                                         .frame(width:25,height:25)
                                 }//Button +
                             }.frame(maxWidth:.infinity, alignment: .leading)
@@ -149,8 +149,8 @@ struct GuidanceView: View {
                                     //Back to beginning
                                 }) {
                                     RoundedRectangle(cornerRadius: 6)
-                                        .fill(totalrep <= 6 ? Color("CustGray") : Color("Orange"))
-                                        .overlay(Text("-").foregroundColor(Color("Cream")))
+                                        .fill(totalrep <= 6 ? Color.custGray : Color.custOrange)
+                                        .overlay(Text("-").foregroundColor(Color.custWhite))
                                         .frame(width:25,height:25)
                                 }//Button -
                                 
@@ -172,8 +172,8 @@ struct GuidanceView: View {
                                     //Back to beginning
                                 }) {
                                     RoundedRectangle(cornerRadius: 5)
-                                        .fill(totalset>=5 ? Color("CustGray") : Color("Orange"))
-                                        .overlay(Text("+").foregroundColor(Color("Cream")))
+                                        .fill(totalset>=5 ? Color.custGray : Color.custOrange)
+                                        .overlay(Text("+").foregroundColor(Color.custWhite))
                                         .frame(width:25,height:25)
                                 }//Button +
                             }.frame(maxWidth:.infinity, alignment: .leading)
@@ -199,7 +199,7 @@ struct GuidanceView: View {
                         Text("PERHATIAN!")
                             .font(.system(size: 22))
                             .fontWeight(.bold)
-                            .foregroundColor(Color("Orange"))
+                            .foregroundColor(Color.custOrange)
                             .frame(maxWidth:.infinity, alignment: .leading)
                             .padding(.bottom,3)
                         
@@ -236,7 +236,7 @@ struct GuidanceView: View {
             
             NavigationLink(destination: BicepCurlView()) {
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(Color("Orange"))
+                    .fill(Color.custOrange)
                     .overlay(Text("Mulai").foregroundColor(.white)
                         .font(.system(size: 16))
                         .fontWeight(.medium))

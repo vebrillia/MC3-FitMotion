@@ -15,7 +15,6 @@
 		04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */; };
 		04A226F02C490421007CB9E8 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226EF2C490421007CB9E8 /* PopUp.swift */; };
 		04A226F22C4E5F44007CB9E8 /* GuidanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */; };
-		04B80D242C4FB4F5006FC5F7 /* bodyTutorial.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04B80D232C4FB4F5006FC5F7 /* bodyTutorial.gif */; };
 		2893384F2C509D6D0036B14B /* BicepCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2893384E2C509D6D0036B14B /* BicepCurlView.swift */; };
 		289338512C509DB30036B14B /* PredictionModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289338502C509DB30036B14B /* PredictionModelView.swift */; };
 		9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035808D2C47AD8F00F0D2CD /* TimerView.swift */; };
@@ -45,6 +44,8 @@
 		AA6D59D02C50DFE1008795C5 /* Pose+Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59BF2C50DFE1008795C5 /* Pose+Landmark.swift */; };
 		AA6D59D12C50DFE1008795C5 /* VideoPrecessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59C12C50DFE1008795C5 /* VideoPrecessingChain.swift */; };
 		AA6D59D32C50E0AF008795C5 /* BicepCurl.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59D22C50E0AF008795C5 /* BicepCurl.mlmodel */; };
+		AA6D59D52C50E5C9008795C5 /* bodyTutorial.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA6D59D42C50E5C9008795C5 /* bodyTutorial.gif */; };
+		AA6D59D72C50EBF4008795C5 /* RepInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59D62C50EBF4008795C5 /* RepInfoButton.swift */; };
 		AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E42C47DFB5003FB64E /* CameraView.swift */; };
 		AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */; };
 		AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */; };
@@ -62,7 +63,6 @@
 		04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepCounterOvl.swift; sourceTree = "<group>"; };
 		04A226EF2C490421007CB9E8 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 		04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceView.swift; sourceTree = "<group>"; };
-		04B80D232C4FB4F5006FC5F7 /* bodyTutorial.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bodyTutorial.gif; sourceTree = "<group>"; };
 		2893384E2C509D6D0036B14B /* BicepCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepCurlView.swift; sourceTree = "<group>"; };
 		289338502C509DB30036B14B /* PredictionModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionModelView.swift; sourceTree = "<group>"; };
 		9035808D2C47AD8F00F0D2CD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -92,6 +92,8 @@
 		AA6D59BF2C50DFE1008795C5 /* Pose+Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Landmark.swift"; sourceTree = "<group>"; };
 		AA6D59C12C50DFE1008795C5 /* VideoPrecessingChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPrecessingChain.swift; sourceTree = "<group>"; };
 		AA6D59D22C50E0AF008795C5 /* BicepCurl.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BicepCurl.mlmodel; sourceTree = "<group>"; };
+		AA6D59D42C50E5C9008795C5 /* bodyTutorial.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = bodyTutorial.gif; path = ../../../../Downloads/bodyTutorial.gif; sourceTree = "<group>"; };
+		AA6D59D62C50EBF4008795C5 /* RepInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepInfoButton.swift; sourceTree = "<group>"; };
 		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +149,7 @@
 		048D50B72C43BE9C00A60AC0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				04B80D232C4FB4F5006FC5F7 /* bodyTutorial.gif */,
+				AA6D59D42C50E5C9008795C5 /* bodyTutorial.gif */,
 				048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -167,6 +169,7 @@
 			children = (
 				AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */,
 				AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */,
+				AA6D59D62C50EBF4008795C5 /* RepInfoButton.swift */,
 				AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */,
 			);
 			path = Component;
@@ -317,8 +320,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B80D242C4FB4F5006FC5F7 /* bodyTutorial.gif in Resources */,
 				9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */,
+				AA6D59D52C50E5C9008795C5 /* bodyTutorial.gif in Resources */,
 				048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */,
 				9049D9BA2C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 in Resources */,
 				048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */,
@@ -361,6 +364,7 @@
 				04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */,
 				AA6D59CC2C50DFE1008795C5 /* ExerciseClassifier+Singleton.swift in Sources */,
 				AA6D59CB2C50DFE1008795C5 /* ExerciseClassifier+PredictAction.swift in Sources */,
+				AA6D59D72C50EBF4008795C5 /* RepInfoButton.swift in Sources */,
 				AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */,
 				AA6D59C42C50DFE1008795C5 /* AVCaptureDeviceInput+Camera.swift in Sources */,
 				AA6D59D12C50DFE1008795C5 /* VideoPrecessingChain.swift in Sources */,
