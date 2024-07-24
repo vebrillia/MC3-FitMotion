@@ -13,8 +13,8 @@ struct SetRepCounterOvl: View {//nanti diganti ke viewmodif
     @State var set: Int = 1 //Nanti ada inputnya ini udah set keberapa
     @State var rep: Int = 1 //Nanti ada inputnya ini udah rep keberapa
     
-    @State var totalset: Int = 3 //Next iterasi bisa custom total set & rep
-    @State var totalrep: Int = 12
+    @Binding var totalset: Int//Next iterasi bisa custom total set & rep
+    @Binding var totalrep: Int
     @State var selectedSet: Int = 0
     
     //    func body(content: Content) -> some View {
@@ -95,6 +95,6 @@ struct SetRepCounterOvl: View {//nanti diganti ke viewmodif
 
 
 #Preview {
-    SetRepCounterOvl()
+    SetRepCounterOvl(totalset: .constant(3), totalrep: .constant(12))
 }
 
