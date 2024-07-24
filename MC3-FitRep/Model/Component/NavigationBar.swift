@@ -2,13 +2,20 @@
 import SwiftUI
 
 struct NavigationBar: View {
-    private let title: String
-    private let subtitle: String
-    
-    private let leftItem: AnyView = AnyView(EmptyView())
-    private let rightItem: AnyView = AnyView(EmptyView())
+    let title: String
+    let subtitle: String
     
     @State private var isShowingPopover = false
+    
+    var leftItem: AnyView = AnyView(EmptyView())
+    var rightItem: AnyView = AnyView(EmptyView())
+    
+    init(title: String, subtitle: String, leftItem: AnyView, rightItem: AnyView) {
+        self.title = title
+        self.subtitle = subtitle
+        self.leftItem = leftItem
+        self.rightItem = rightItem
+    }
     
     init(title: String, subtitle: String) {
         self.title = title
