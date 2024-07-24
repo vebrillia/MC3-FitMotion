@@ -53,7 +53,7 @@ struct GuidanceView: View {
                     .shadow(radius: 5)
                 
                 Divider()
-                    .background(Color.lightGray)
+                    .background(Color.custGray)
                     .frame(height:2)
                     .padding(.top)
                 
@@ -212,7 +212,7 @@ struct GuidanceView: View {
                     }.padding(.vertical,8)
                     
                     Rectangle()
-                        .fill(Color.cream)
+                        .fill(Color.custWhite)
                         .frame(height: 50)
                         .edgesIgnoringSafeArea(.bottom)
                 }//ScrollView
@@ -223,12 +223,12 @@ struct GuidanceView: View {
             VStack (spacing: 0) {
                 Rectangle()
                     .fill(LinearGradient(
-                        gradient: Gradient(colors: [Color.cream.opacity(1), Color.clear]),
+                        gradient: Gradient(colors: [Color.custWhite, Color.clear]),
                         startPoint: .bottom,
                         endPoint: .top))
                     .frame(height: 100)
                 Rectangle()
-                    .fill(Color.cream)
+                    .fill(Color.custWhite)
                     .frame(height: 50)
                     .edgesIgnoringSafeArea(.bottom)
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
