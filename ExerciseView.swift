@@ -37,7 +37,7 @@ struct ExerciseView: View {
             pulseIndicator()
                 
             
-            SetRepCounterOvl()
+//            SetRepCounterOvl()
             
         }
         .navigationBarBackButtonHidden(true)
