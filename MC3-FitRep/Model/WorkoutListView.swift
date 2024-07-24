@@ -7,7 +7,7 @@ struct WorkoutsListView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                NavigationBar(title: "Workouts", subtitle: "Build your muscle", image: "info.circle")
+                NavigationBar(title: "Workouts", subtitle: "Build your muscle")
                 
                 WorkoutList(title: "Bicep Curl", subtitle: "Arms", image: "BicepPerson", destination: AnyView(GuidanceView()))
                 WorkoutListLocked(title: "Push Up", subtitle: "Arms & Chest")
