@@ -45,6 +45,7 @@
 		AA6D59D32C50E0AF008795C5 /* BicepCurl.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59D22C50E0AF008795C5 /* BicepCurl.mlmodel */; };
 		AA6D59D72C50EBF4008795C5 /* RepInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59D62C50EBF4008795C5 /* RepInfoButton.swift */; };
 		AA6D59D92C50ED40008795C5 /* bodyTutorial.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA6D59D82C50ED40008795C5 /* bodyTutorial.gif */; };
+		AA6D59E62C50EF49008795C5 /* VideoPrecessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59E42C50EF49008795C5 /* VideoPrecessingChain.swift */; };
 		AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E42C47DFB5003FB64E /* CameraView.swift */; };
 		AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */; };
 		AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */; };
@@ -92,6 +93,7 @@
 		AA6D59D22C50E0AF008795C5 /* BicepCurl.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BicepCurl.mlmodel; sourceTree = "<group>"; };
 		AA6D59D62C50EBF4008795C5 /* RepInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepInfoButton.swift; sourceTree = "<group>"; };
 		AA6D59D82C50ED40008795C5 /* bodyTutorial.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bodyTutorial.gif; sourceTree = "<group>"; };
+		AA6D59E42C50EF49008795C5 /* VideoPrecessingChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPrecessingChain.swift; sourceTree = "<group>"; };
 		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				AA6D59BB2C50DFE1008795C5 /* Action Classifier */,
 				AA6D59C02C50DFE1008795C5 /* Pose */,
 				AA6D59B42C50DFE1008795C5 /* Video Capture */,
+				AA6D59E52C50EF49008795C5 /* Video Processing Chain */,
 				AAFD67EB2C47DFC6003FB64E /* View */,
 				AAFD67EC2C47DFCE003FB64E /* View Model */,
 				AAFD67EA2C47DFB9003FB64E /* Model */,
@@ -205,6 +208,14 @@
 				AA6D59BF2C50DFE1008795C5 /* Pose+Landmark.swift */,
 			);
 			path = Pose;
+			sourceTree = "<group>";
+		};
+		AA6D59E52C50EF49008795C5 /* Video Processing Chain */ = {
+			isa = PBXGroup;
+			children = (
+				AA6D59E42C50EF49008795C5 /* VideoPrecessingChain.swift */,
+			);
+			path = "Video Processing Chain";
 			sourceTree = "<group>";
 		};
 		AAFD67EA2C47DFB9003FB64E /* Model */ = {
@@ -333,6 +344,7 @@
 				AA6D59C62C50DFE1008795C5 /* Video Capture.swift in Sources */,
 				9049D9B62C4F9F2E00ABFCB4 /* CameraPositionView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitRepApp.swift in Sources */,
+				AA6D59E62C50EF49008795C5 /* VideoPrecessingChain.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitRepApp.swift in Sources */,
 				AA6D59D02C50DFE1008795C5 /* Pose+Landmark.swift in Sources */,
 				AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */,
