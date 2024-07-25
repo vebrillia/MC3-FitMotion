@@ -10,6 +10,10 @@ import Vision
 
 struct BicepCurlView: View {
     
+    @State var animatePulse = false
+    @State private var bodypose : String = "Idle" //minta info dari camera
+    @State private var sizeStatus: Int = 0 //untuk ngambil data berapa ukuran modifier pulse
+    
     @ObservedObject var predictionVM = PredictionViewModel()
     @State private var boxColor: Color = .gray.opacity(0.5)
     @StateObject var audioManager = AudioManager()
@@ -40,6 +44,40 @@ struct BicepCurlView: View {
         isCountingDown = false
     }
     
+    var pulse : some View {
+        ZStack{
+            Circle().fill(pulseColor(bodypose).opacity(0.25)).frame(width: 350, height: 350).scaleEffect(self.animatePulse ? 1:0.5)
+//                .glow()
+            Circle().fill(pulseColor(bodypose).opacity(0.35)).frame(width: 250, height: 250).scaleEffect(self.animatePulse ? 1:0.5)
+//                .glow()
+            Circle().fill(pulseColor(bodypose).opacity(0.45)).frame(width: 150, height: 150).scaleEffect(self.animatePulse ? 1:0.5)
+//                .glow()
+            Circle().fill(pulseColor(bodypose)).frame(width: 50, height: 50).scaleEffect(self.animatePulse ? 1:0.5)
+//                .glow()
+        }.onAppear{
+            withAnimation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true)) {
+                self.animatePulse.toggle()
+                
+                if predictionVM.predicted == "Idle"
+                {
+                    self.animatePulse.toggle()
+                    if predictionVM.predicted != "Idle"
+                    {self.animatePulse.toggle()}
+                }
+            }
+            bodypose = predictionVM.predicted
+        }
+    }
+    func pulseColor(_ bodypose: String) -> Color { //nanti untuk kirim data dari ML pose bener atau ngga
+        if bodypose == "Benar" {
+            return Color.green
+        } else if bodypose == "Salah" {
+            return Color.red
+        } else {
+            return (Color.gray)
+        }
+    }
+    
     var switchCamera: some View {
         HStack {
             Button {
@@ -58,6 +96,7 @@ struct BicepCurlView: View {
     var predictionLabels: some View {
         VStack {
             switchCamera
+            pulse
             Spacer()
             Text("Prediction: \(predictionVM.predicted)")
             Text("Confidence: \(predictionVM.confidence)")
