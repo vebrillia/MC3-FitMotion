@@ -46,6 +46,7 @@
 		AA6D59D72C50EBF4008795C5 /* RepInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59D62C50EBF4008795C5 /* RepInfoButton.swift */; };
 		AA6D59D92C50ED40008795C5 /* bodyTutorial.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA6D59D82C50ED40008795C5 /* bodyTutorial.gif */; };
 		AA6D59E62C50EF49008795C5 /* VideoPrecessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59E42C50EF49008795C5 /* VideoPrecessingChain.swift */; };
+		AA6D59ED2C5116EB008795C5 /* GIFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59EC2C5116EB008795C5 /* GIFImageView.swift */; };
 		AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E42C47DFB5003FB64E /* CameraView.swift */; };
 		AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */; };
 		AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */; };
@@ -94,6 +95,7 @@
 		AA6D59D62C50EBF4008795C5 /* RepInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepInfoButton.swift; sourceTree = "<group>"; };
 		AA6D59D82C50ED40008795C5 /* bodyTutorial.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bodyTutorial.gif; sourceTree = "<group>"; };
 		AA6D59E42C50EF49008795C5 /* VideoPrecessingChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPrecessingChain.swift; sourceTree = "<group>"; };
+		AA6D59EC2C5116EB008795C5 /* GIFImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImageView.swift; sourceTree = "<group>"; };
 		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				AAFD67EE2C47E002003FB64E /* ContentView.swift */,
 				AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */,
 				04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */,
+				AA6D59EC2C5116EB008795C5 /* GIFImageView.swift */,
 				9049D9B52C4F9F2E00ABFCB4 /* CameraPositionView.swift */,
 				9049D9B32C4F9ECF00ABFCB4 /* ExerciseView.swift */,
 				AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */,
@@ -342,6 +345,7 @@
 				AA6D59CA2C50DFE1008795C5 /* ExerciseClassifier+LabelCheck.swift in Sources */,
 				9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */,
 				AA6D59C62C50DFE1008795C5 /* Video Capture.swift in Sources */,
+				AA6D59ED2C5116EB008795C5 /* GIFImageView.swift in Sources */,
 				9049D9B62C4F9F2E00ABFCB4 /* CameraPositionView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitRepApp.swift in Sources */,
 				AA6D59E62C50EF49008795C5 /* VideoPrecessingChain.swift in Sources */,
