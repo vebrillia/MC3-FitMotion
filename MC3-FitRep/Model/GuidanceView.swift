@@ -84,6 +84,7 @@ struct GuidanceView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 5))
                                 
                                 TextField("\(totalSet)", value: $totalSet, format: .number)
+                                    .foregroundStyle(Color.custBlack)
                                     .keyboardType(.numberPad)
                                     .frame(width: 25)
                                     .multilineTextAlignment(.center)
@@ -129,6 +130,7 @@ struct GuidanceView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 5))
                                 
                                 TextField("\(totalRep)", value: $totalRep, format: .number)
+                                    .foregroundStyle(Color.custBlack)
                                     .keyboardType(.numberPad)
                                     .frame(width: 25)
                                     .multilineTextAlignment(.center)

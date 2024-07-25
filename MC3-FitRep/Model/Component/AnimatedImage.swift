@@ -11,6 +11,7 @@ struct AnimatedImage: View {
         Image("\(imageName)\(String(format: "%0\(zeroPadding)d", currentFrame))")
             .resizable()
             .scaledToFit()
+            .padding(.trailing, 28)
             .onReceive(Timer.publish(every: frameDuration, on: .main, in: .common).autoconnect()) { _ in
                 if currentFrame == totalFrame {
                     currentFrame = 0
