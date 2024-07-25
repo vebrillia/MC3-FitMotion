@@ -83,7 +83,7 @@ struct SetRepCounterOvl: View {//nanti diganti ke viewmodif
                     }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                         .ignoresSafeArea()//Ini code untuk shadow
                     
-                    pulseIndicator()
+//                    pulseIndicator()
                         .blur(radius:5)
                     //code Glowing Indicator
                 }.frame(maxHeight: .infinity)//Untuk bottom overlay package

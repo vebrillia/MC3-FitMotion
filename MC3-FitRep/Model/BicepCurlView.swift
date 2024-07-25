@@ -8,13 +8,29 @@
 import SwiftUI
 import Vision
 
+struct SemiCircle: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.addArc(center: CGPoint(x: rect.midX, y: rect.midY),
+                    radius: rect.width / 2,
+                    startAngle: .degrees(0),
+                    endAngle: .degrees(180),
+                    clockwise: true)
+        path.addLine(to: CGPoint(x: rect.midX, y: rect.midY))
+        path.closeSubpath()
+        return path
+    }
+}
+
 struct BicepCurlView: View {
     
     @State var animatePulse = false
-    @State private var bodypose : String = "Idle" //minta info dari camera
+    @State private var bodypose: String = "Idle" //minta info dari camera
     @State private var sizeStatus: Int = 0 //untuk ngambil data berapa ukuran modifier pulse
-    
-    @ObservedObject var predictionVM = PredictionViewModel()
+    @State private var totalSet: Int = 0
+    @State private var totalRep: Int = 0
+
+    @StateObject var predictionVM = PredictionViewModel()
     @State private var boxColor: Color = .gray.opacity(0.5)
     @StateObject var audioManager = AudioManager()
     @State private var countdown: Int = 5
@@ -44,37 +60,42 @@ struct BicepCurlView: View {
         isCountingDown = false
     }
     
-    var pulse : some View {
-        ZStack{
-            Circle().fill(pulseColor(bodypose).opacity(0.25)).frame(width: 350, height: 350).scaleEffect(self.animatePulse ? 1:0.5)
-//                .glow()
-            Circle().fill(pulseColor(bodypose).opacity(0.35)).frame(width: 250, height: 250).scaleEffect(self.animatePulse ? 1:0.5)
-//                .glow()
-            Circle().fill(pulseColor(bodypose).opacity(0.45)).frame(width: 150, height: 150).scaleEffect(self.animatePulse ? 1:0.5)
-//                .glow()
-            Circle().fill(pulseColor(bodypose)).frame(width: 50, height: 50).scaleEffect(self.animatePulse ? 1:0.5)
-//                .glow()
-        }.onAppear{
+    var pulse: some View {
+        ZStack {
+            SemiCircle()
+                .fill(pulseColor(predictionVM.predicted).opacity(0.25))
+                .frame(width: 350, height: 350)
+                .scaleEffect(self.animatePulse ? 1 : 0.5)
+            SemiCircle()
+                .fill(pulseColor(predictionVM.predicted).opacity(0.35))
+                .frame(width: 250, height: 250)
+                .scaleEffect(self.animatePulse ? 1 : 0.5)
+            SemiCircle()
+                .fill(pulseColor(predictionVM.predicted).opacity(0.45))
+                .frame(width: 150, height: 150)
+                .scaleEffect(self.animatePulse ? 1 : 0.5)
+            SemiCircle()
+                .fill(pulseColor(predictionVM.predicted))
+                .frame(width: 50, height: 50)
+                .scaleEffect(self.animatePulse ? 1 : 0.5)
+        }
+        .onAppear {
             withAnimation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true)) {
                 self.animatePulse.toggle()
-                
-                if predictionVM.predicted == "Idle"
-                {
-                    self.animatePulse.toggle()
-                    if predictionVM.predicted != "Idle"
-                    {self.animatePulse.toggle()}
-                }
             }
-            bodypose = predictionVM.predicted
+        }
+        .onChange(of: predictionVM.predicted) { newValue in
+            bodypose = newValue
         }
     }
+
     func pulseColor(_ bodypose: String) -> Color { //nanti untuk kirim data dari ML pose bener atau ngga
         if bodypose == "Benar" {
             return Color.green
         } else if bodypose == "Salah" {
             return Color.red
         } else {
-            return (Color.gray)
+            return Color.gray
         }
     }
     
@@ -94,29 +115,53 @@ struct BicepCurlView: View {
     }
     
     var predictionLabels: some View {
-        VStack {
-            switchCamera
-            pulse
-            Spacer()
-            Text("Prediction: \(predictionVM.predicted)")
-            Text("Confidence: \(predictionVM.confidence)")
-            Text("Correct: \(predictionVM.benarCount)")
-            Text("Wrong: \(predictionVM.salahCount)")
+        ZStack {
+            SetRepCounterOvl(totalset: $totalSet, totalrep: $totalRep)
+            
+            VStack {
+                switchCamera
+                    .padding(.top, 10)
+                Spacer()
+                ZStack {
+                    pulse
+                    
+                    VStack {
+//                        Text("Prediction: \(predictionVM.predicted)")
+//                        Text("Confidence: \(predictionVM.confidence)")
+                        Text("\(predictionVM.benarCount)")
+                            .font(.system(size: 80))
+                            .padding(.bottom,100)
+                            .bold()
+                            .foregroundColor(.white)
+//                        Text("Wrong: \(predictionVM.salahCount)")
+                    }
+                    
+                }
+                .offset(y: 175)
+                
+                
+            }
+            .onAppear {
+                audioManager.playSoundEffect(named: "StartNGuidePertama")
+            }
         }
     }
     
     var StartView: some View {
         VStack {
+            switchCamera
             ZStack {
+                
                 RoundedRectangle(cornerRadius: 10)
                     .frame(width: boxFrame.width, height: boxFrame.height)
                     .foregroundColor(predictionVM.indicator ? Color.green.opacity(0.3) : boxColor)
                 
                 if isCountingDown {
-                    Text("\(countdown)")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .bold()
+                    VStack {
+                        Text("Starting in ")
+                        Text("\(countdown)")
+                            .font(.system(size: 80))
+                    }
                 }
             }
             
@@ -124,6 +169,8 @@ struct BicepCurlView: View {
                 .multilineTextAlignment(.center)
                 .padding(10)
                 .padding(.top, 20)
+                .padding(.leading, 20)
+                .padding(.trailing, 20)
         }
         .onChange(of: predictionVM.indicator) { newValue in
             if newValue {
@@ -139,6 +186,9 @@ struct BicepCurlView: View {
             Image(uiImage: predictionVM.currentFrame ?? UIImage())
                 .resizable()
                 .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+                .ignoresSafeArea()
+                .frame(maxHeight: .infinity)
             
             if navigateToExerciseView {
                 predictionLabels
@@ -150,7 +200,6 @@ struct BicepCurlView: View {
         .onAppear {
             predictionVM.updateUILabels(with: .startingPrediction)
         }
-        // Detect if device change orientation
         .onReceive(
             NotificationCenter
                 .default
