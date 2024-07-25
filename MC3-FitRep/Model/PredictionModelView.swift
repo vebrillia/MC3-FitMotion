@@ -15,15 +15,21 @@ class PredictionViewModel: ObservableObject {
     @Published var confidence: String = ""
     @Published var benarCount: Int = 0
     @Published var salahCount: Int = 0
+    @Published var indicator: Bool = false
     var recognizedPoints: [CGPoint] = []
+
     
     // Properties to track "Benar" frames
     private var benarFrameCount: Int = 0
     private var salahFrameCount: Int = 0
+    private var idleFrameCount: Int = 0
+    
 
     
     private let frameRate = 30.0 // 30 fps
     private let windowSize: Int
+    
+    private var isPaused: Bool = false
     
     /// Captures the frames from the camera and creates a frame publisher.
     var videoCapture: VideoCapture!
@@ -52,36 +58,60 @@ class PredictionViewModel: ObservableObject {
     
     func updateUILabels(with prediction: ActionPrediction) {
         DispatchQueue.main.async {
-            self.predicted = prediction.label
-            
-            if prediction.label == "Benar" {
-                self.benarFrameCount += 1
-                print("Benar frame count: \(self.benarFrameCount)")
-                if self.benarFrameCount >= 8 { // Ensure it matches the 2 seconds (60 frames)
-                    self.benarCount += 1
-                    self.benarFrameCount = 0 // Reset the frame count
-                    self.salahFrameCount = 0
-                    print("Benar count incremented: \(self.benarCount)")
-                }
+            if self.isPaused {
+                return
             }
-            else if prediction.label == "Salah" {
-                self.salahFrameCount += 1
-                print("Salah frame count: \(self.salahFrameCount)")
-                if self.salahFrameCount >= 5 { // Ensure it matches the 2 seconds (60 frames)
-                    self.salahCount += 1
-                    self.salahFrameCount = 0 // Reset the frame count
+
+            self.predicted = prediction.label
+                        
+            if self.indicator==true{
+                if prediction.label == "Benar" {
+                    self.benarFrameCount += 1
+                    self.salahFrameCount = 0
+                    print("---Benar count: \(self.benarFrameCount)")
+                    
+                    if self.benarFrameCount >= 3 {
+                        self.pausePrediction()
+                        self.benarCount += 1
+                    }
+                } else if prediction.label == "Salah" {
+                    self.salahFrameCount += 1
                     self.benarFrameCount = 0
-                    print("Salah count incremented: \(self.salahCount)")
-                }            }
-            else {
-                self.benarFrameCount = 0 // Reset if prediction is not "Benar"
-                self.salahFrameCount = 0
-                print("--IDLE--")
+                    print("Salah count: \(self.salahFrameCount)---")
+                    
+                    if self.salahFrameCount >= 3 {
+                        self.pausePrediction()
+                        self.salahCount += 1
+                    }
+                }
+                else if prediction.label == "Idle"  {
+                              self.idleFrameCount += 1
+                              self.benarFrameCount = 0
+                              self.salahFrameCount = 0
+                              print("--IDLE--")
+                          }
+            }
+            else{
+                if prediction.label == "Idle"{
+                self.idleFrameCount += 1
+                    if self.idleFrameCount >= 8 {
+                        self.indicator = true
+                    }
+                }
             }
         }
 
         let confidenceString = prediction.confidenceString ?? "Observing..."
         DispatchQueue.main.async { self.confidence = confidenceString }
+    }
+
+    private func pausePrediction() {
+        self.isPaused = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.isPaused = false
+            self.benarFrameCount = 0
+            self.salahFrameCount = 0
+        }
     }
     
     func updateRecognizedPoints(with points: [CGPoint]) {
@@ -89,7 +119,6 @@ class PredictionViewModel: ObservableObject {
         // Notify observers that recognized points have changed
         self.objectWillChange.send()
     }
-    // Other methods...
 }
 
 extension PredictionViewModel: VideoCaptureDelegate {

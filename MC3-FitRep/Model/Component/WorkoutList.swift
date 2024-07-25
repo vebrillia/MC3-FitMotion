@@ -27,7 +27,7 @@ struct WorkoutList: View {
                         
                         Spacer()
                         
-                        Image(systemName: "arrow.right")
+                        Image(systemName: "chevron.right")
                             .frame(maxHeight: 0)
                     }
                     .padding(.bottom, 4)
