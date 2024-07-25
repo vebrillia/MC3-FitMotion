@@ -292,7 +292,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					048D50AD2C43BE9A00A60AC0 = {
 						CreatedOnToolsVersion = 15.2;
@@ -349,7 +349,6 @@
 				9049D9B62C4F9F2E00ABFCB4 /* CameraPositionView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitRepApp.swift in Sources */,
 				AA6D59E62C50EF49008795C5 /* VideoPrecessingChain.swift in Sources */,
-				048D50B22C43BE9A00A60AC0 /* MC3_FitRepApp.swift in Sources */,
 				AA6D59D02C50DFE1008795C5 /* Pose+Landmark.swift in Sources */,
 				AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */,
 				AA6D59C32C50DFE1008795C5 /* AVCaptureDevice+FrameRate.swift in Sources */,
