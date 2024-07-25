@@ -10,10 +10,10 @@ struct NavigationBar: View {
     var leftItem: AnyView = AnyView(EmptyView())
     var rightItem: AnyView = AnyView(EmptyView())
     
-    init(title: String, subtitle: String, leftItem: AnyView, rightItem: AnyView) {
+    init(title: String, subtitle: String, rightItem: AnyView) {
         self.title = title
         self.subtitle = subtitle
-        self.leftItem = leftItem
+        self.leftItem = AnyView(EmptyView())
         self.rightItem = rightItem
     }
     
@@ -27,6 +27,7 @@ struct NavigationBar: View {
             
             HStack {
                 leftItem
+                Spacer()
                 rightItem
             }
             
@@ -39,11 +40,13 @@ struct NavigationBar: View {
                 Spacer()
             }
     
-            HStack {
-                Text(subtitle)
-                    .foregroundStyle(Color.custGray)
-                    .frame(height: 8)
-                Spacer()
+            if !subtitle.isEmpty {
+                HStack {
+                    Text(subtitle)
+                        .foregroundStyle(Color.custGray)
+                        .frame(height: 8)
+                    Spacer()
+                }
             }
         }
         .padding()
