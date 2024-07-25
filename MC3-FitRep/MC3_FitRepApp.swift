@@ -11,7 +11,7 @@ import SwiftUI
 struct MC3_FitRepApp: App {
     var body: some Scene {
         WindowGroup {
-            BicepCurlView()
+            ContentView()
         }
     }
 }
