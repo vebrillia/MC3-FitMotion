@@ -169,6 +169,7 @@ struct GuidanceView: View {
                             .font(.title2)
                             .bold()
                             .frame(maxWidth:.infinity, alignment: .leading)
+                            .padding(.bottom, 6)
                         
                         VStack(alignment: .leading) {
                             ForEach(dataInstuksi.components(separatedBy: "\n"), id: \.self) { line in
@@ -190,6 +191,7 @@ struct GuidanceView: View {
                             .font(.title2)
                             .bold()
                             .frame(maxWidth:.infinity, alignment: .leading)
+                            .padding(.bottom, 6)
 
                         VStack(alignment: .leading) {
                             ForEach(dataLarangan.components(separatedBy: "\n"), id: \.self) { line in
@@ -205,7 +207,19 @@ struct GuidanceView: View {
                         }
                    }
                     .padding(.horizontal)
-                    
+                    .padding(.bottom, 80)
+                }
+                
+                VStack {
+                    Spacer()
+                    NavigationLink(destination: BicepCurlView()) {
+                        Text("Mulai")
+                            .foregroundStyle(Color.custWhite)
+                            .frame(maxWidth: .infinity, maxHeight: 40)
+                            .background(Color.custOrange)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .padding()
+                    }
                 }
             }
             .foregroundColor(Color.custBlack)
