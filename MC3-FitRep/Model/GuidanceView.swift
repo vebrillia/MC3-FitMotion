@@ -15,9 +15,21 @@ struct GuidanceView: View {
     @State var totalSet: Int = 3
     @State var totalRep: Int = 12
     
-    @State var dataInstuksi: String = "1. Pilih beban yang sesuai dengan kemampuanmu.\n2. **Buka kaki selebar bahu, tempel sisi siku ke torso, dan kunci otot perut** dengan berusaha mengecilkan perut semaksimal mungkin.\n3. **Hembuskan nafas saat mengangkat beban dan tarik napas saat menurunkannya**.\n4. Aktifkan otot bisep dan fokuskan kontraksi pada otot tersebut.\n5. Lakukan setiap pergerakan dengan kontrol.\n6. Tempo gerakan: mengangkat 1 detik, menurunkan 2 detik."//@CHRIS tolong buatkan swift data(?)nya ya thankyou
-    @State var dataLarangan: String = "1. Saat memanjangkan lengan, jangan lakukan hingga titik maksimal sendi. Berhenti sedikit sebelum titik maksimal.\n2. Jangan menggerakkan bahu, siku, pergelangan tanga, dan punggung saat melakukan gerakan. Hanya lengan bawah yang boleh bergerak.\n3. Jangan gunakan momentum untuk mengangkat beban."//DATA
-    
+    @State var dataInstuksi: String = """
+    1. Pilih beban yang sesuai dengan kemampuanmu.
+    2. Buka kaki selebar bahu, tempel sisi siku ke torso, dan kunci otot perut dengan berusaha mengecilkan perut semaksimal mungkin.
+    3. Hembuskan nafas saat mengangkat beban dan tarik napas saat menurunkannya.
+    4. Aktifkan otot bisep dan fokuskan kontraksi pada otot tersebut.
+    5. Lakukan setiap pergerakan dengan kontrol.
+    6. Tempo gerakan: mengangkat 1 detik, menurunkan 2 detik.
+    """
+
+    @State var dataLarangan: String = """
+    1. Saat memanjangkan lengan, jangan lakukan hingga titik maksimal sendi. Berhenti sedikit sebelum titik maksimal.
+    2. Jangan menggerakkan bahu, siku, pergelangan tangan, dan punggung saat melakukan gerakan. Hanya lengan bawah yang boleh bergerak.
+    3. Jangan gunakan momentum untuk mengangkat beban.
+    """
+
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.custBlack]
     }
@@ -40,7 +52,6 @@ struct GuidanceView: View {
                         VStack {
                             Text("Target Otot")
                                 .frame(maxWidth:.infinity, alignment: .leading)
-                                .foregroundColor(Color.custBlack)
                                 .font(.title3)
                                 .bold()
                             
@@ -52,7 +63,6 @@ struct GuidanceView: View {
                         VStack {
                             Text("Peralatan")
                                 .frame(maxWidth:.infinity, alignment: .leading)
-                                .foregroundColor(Color.custBlack)
                                 .font(.title3)
                                 .bold()
                             
@@ -67,8 +77,7 @@ struct GuidanceView: View {
                         VStack {
                             Text("Jumlah Set")
                                 .frame(maxWidth:.infinity, alignment: .leading)
-                                .foregroundColor(Color.custBlack)
-                                .font(.title3)
+                                .font(.title2)
                                 .bold()
                             
                             HStack {
@@ -84,7 +93,6 @@ struct GuidanceView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 5))
                                 
                                 TextField("\(totalSet)", value: $totalSet, format: .number)
-                                    .foregroundStyle(Color.custBlack)
                                     .keyboardType(.numberPad)
                                     .frame(width: 25)
                                     .multilineTextAlignment(.center)
@@ -113,8 +121,7 @@ struct GuidanceView: View {
                         VStack {
                             Text("Jumlah Rep")
                                 .frame(maxWidth:.infinity, alignment: .leading)
-                                .foregroundColor(Color.custBlack)
-                                .font(.title3)
+                                .font(.title2)
                                 .bold()
                             
                             HStack {
@@ -130,7 +137,6 @@ struct GuidanceView: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 5))
                                 
                                 TextField("\(totalRep)", value: $totalRep, format: .number)
-                                    .foregroundStyle(Color.custBlack)
                                     .keyboardType(.numberPad)
                                     .frame(width: 25)
                                     .multilineTextAlignment(.center)
@@ -160,32 +166,51 @@ struct GuidanceView: View {
                     
                     VStack {
                         Text("Instruksi")
-                            .foregroundColor(Color.custBlack)
                             .font(.title2)
                             .bold()
                             .frame(maxWidth:.infinity, alignment: .leading)
                         
-                        Text(dataInstuksi)
-                            .foregroundColor(Color.custBlack)
-                            .frame(maxWidth:.infinity, maxHeight: .infinity, alignment: .leading)
+                        VStack(alignment: .leading) {
+                            ForEach(dataInstuksi.components(separatedBy: "\n"), id: \.self) { line in
+                                HStack(alignment: .top) {
+                                    Text(line.prefix(3))
+                                        .padding(.leading, 6)
+                                    
+                                    Text(line.dropFirst(3))
+                                        .tracking(0.5)
+                                    Spacer()
+                                }
+                            }
+                        }
                     }
                     .padding()
                     
                     VStack {
-                       Text("PERHATIAN!")
-                            .foregroundColor(Color.custOrange)
+                       Text("Perhatian")
                             .font(.title2)
                             .bold()
                             .frame(maxWidth:.infinity, alignment: .leading)
 
-                       Text(dataInstuksi)
-                            .foregroundColor(Color.custBlack)
-                            .frame(maxWidth:.infinity, maxHeight: .infinity, alignment: .leading)
+                        VStack(alignment: .leading) {
+                            ForEach(dataLarangan.components(separatedBy: "\n"), id: \.self) { line in
+                                HStack(alignment: .top) {
+                                    Text(line.prefix(3))
+                                        .padding(.leading, 6)
+                                    
+                                    Text(line.dropFirst(3))
+                                        .tracking(0.5)
+                                    Spacer()
+                                }
+                            }
+                        }
                    }
                     .padding(.horizontal)
+                    
                 }
             }
+            .foregroundColor(Color.custBlack)
             .navigationTitle(selectedWorkout)
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
