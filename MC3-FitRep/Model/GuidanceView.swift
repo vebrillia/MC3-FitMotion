@@ -31,9 +31,13 @@ struct GuidanceView: View {
                     .ignoresSafeArea(.all)
                 
                 ScrollView {
-                    GIFImageView("bodyTutorial")
-                        .scaledToFit()
-                        .frame(maxWidth: .infinity, maxHeight: 260, alignment: .bottom)
+//                    GIFImageView("bodyTutorial")
+//                        .scaledToFit()
+//                        .frame(maxWidth: .infinity, maxHeight: 260)
+//                        .background(Color.custTosca)
+                    
+                    AnimatedImage(imageName: "bodyTutorial", totalFrame: 86, frameDuration: 0.03, zeroPadding: 4)
+                        .frame(maxWidth: .infinity, maxHeight: 260)
                         .background(Color.custTosca)
                     
                     HStack(spacing: 60) {
