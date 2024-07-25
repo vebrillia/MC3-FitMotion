@@ -4,6 +4,10 @@ import SwiftUI
 struct WorkoutsListView: View {
     @State private var isShowingPopover: Bool = false
     
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.custBlack]
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {

@@ -19,7 +19,7 @@ struct GuidanceView: View {
     @State var dataLarangan: String = "1. Saat memanjangkan lengan, jangan lakukan hingga titik maksimal sendi. Berhenti sedikit sebelum titik maksimal.\n2. Jangan menggerakkan bahu, siku, pergelangan tanga, dan punggung saat melakukan gerakan. Hanya lengan bawah yang boleh bergerak.\n3. Jangan gunakan momentum untuk mengangkat beban."//DATA
     
     init() {
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.custBlack]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.custBlack]
     }
     
     var body: some View {
