@@ -7,13 +7,11 @@ struct NavigationBar: View {
     
     @State private var isShowingPopover = false
     
-    var leftItem: AnyView = AnyView(EmptyView())
     var rightItem: AnyView = AnyView(EmptyView())
     
     init(title: String, subtitle: String, rightItem: AnyView) {
         self.title = title
         self.subtitle = subtitle
-        self.leftItem = AnyView(EmptyView())
         self.rightItem = rightItem
     }
     
@@ -26,18 +24,13 @@ struct NavigationBar: View {
         VStack {
             
             HStack {
-                leftItem
-                Spacer()
-                rightItem
-            }
-            
-            HStack {
                 Text(title)
                     .frame(height: 32)
                     .foregroundStyle(Color.custBlack)
                     .font(.largeTitle)
                     .bold()
                 Spacer()
+                rightItem
             }
     
             if !subtitle.isEmpty {

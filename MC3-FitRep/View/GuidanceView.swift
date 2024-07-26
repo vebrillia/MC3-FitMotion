@@ -46,48 +46,50 @@ struct GuidanceView: View {
                 
                 ScrollView {
                     
-                    AnimatedImage(imageName: "bodyTutorialpng", totalFrame: 86, frameDuration: 0.03, zeroPadding: 4)
-                        .frame(maxWidth: .infinity, maxHeight: 260)
-                        .background(Color.custTosca)
-                    
-                    HStack(spacing: 60) {
-                        VStack {
-                            Text("Target Otot")
-                                .frame(maxWidth:.infinity, alignment: .leading)
-                                .font(.title3)
-                                .bold()
-                            
-                            Text("Biceps")
-                                .frame(maxWidth:.infinity, alignment: .leading)
-                                .foregroundColor(Color.custGray)
-                        }
+                    ZStack(alignment: .bottomLeading) {
+                        AnimatedImage(imageName: "bodyTutorialpng", totalFrame: 86, frameDuration: 0.03, zeroPadding: 4)
+                            .frame(maxWidth: .infinity, maxHeight: 240)
+                            .background(Color.custTosca)
                         
-                        VStack {
-                            Text("Peralatan")
-                                .frame(maxWidth:.infinity, alignment: .leading)
-                                .font(.title3)
-                                .bold()
+                        VStack(spacing: 10) {
+                            VStack {
+                                Text("Peralatan")
+                                    .frame(maxWidth:.infinity, alignment: .leading)
+                                    .font(.headline)
+                                    .bold()
+                                
+                                Text("Dumbbell")
+                                    .frame(maxWidth:.infinity, alignment: .leading)
+                                    .font(.caption)
+                            }
                             
-                            Text("Dumbbell")
-                                .frame(maxWidth:.infinity, alignment: .leading)
-                                .foregroundColor(Color.custGray)
+                            VStack {
+                                Text("Target Otot")
+                                    .frame(maxWidth:.infinity, alignment: .leading)
+                                    .font(.headline)
+                                    .bold()
+                                
+                                Text("Biceps")
+                                    .frame(maxWidth:.infinity, alignment: .leading)
+                                    .font(.caption)
+                            }
                         }
+                        .foregroundStyle(Color.fontWhite)
+                        .padding()
                     }
-                    .padding()
                     
-                    HStack(spacing: 60) {
+                    HStack {
+                        Spacer()
                         VStack {
                             Text("Jumlah Set")
-                                .frame(maxWidth:.infinity, alignment: .leading)
-                                .font(.title2)
-                                .bold()
+                                .frame(height: 12)
                             
                             HStack {
                                 Button(action: {
                                     self.totalSet -= 1
                                 }) {
                                     Text("-")
-                                        .foregroundStyle(Color.custWhite)
+                                        .foregroundStyle(Color.fontWhite)
                                 }
                                 .frame(width: 25, height: 25)
                                 .background(totalSet <= 3 ? Color.custGray : Color.custOrange)
@@ -96,7 +98,9 @@ struct GuidanceView: View {
                                 
                                 TextField("\(totalSet)", value: $totalSet, format: .number)
                                     .keyboardType(.numberPad)
-                                    .frame(width: 25)
+                                    .font(.largeTitle)
+                                    .bold()
+                                    .frame(width: 52)
                                     .multilineTextAlignment(.center)
                                     .padding(3)
                                     .overlay(
@@ -109,29 +113,26 @@ struct GuidanceView: View {
                                     self.totalSet += 1
                                 }) {
                                     Text("+")
-                                        .foregroundStyle(Color.custWhite)
+                                        .foregroundStyle(Color.fontWhite)
                                 }
                                 .frame(width: 25, height: 25)
                                 .background(totalSet >= 6 ? Color.custGray : Color.custOrange)
                                 .disabled(totalSet >= 6)
                                 .clipShape(RoundedRectangle(cornerRadius: 5))
-                                
-                                Spacer()
                             }
                         }
-                        
+                        Spacer()
+                        Spacer()
                         VStack {
                             Text("Jumlah Rep")
-                                .frame(maxWidth:.infinity, alignment: .leading)
-                                .font(.title2)
-                                .bold()
+                                .frame(height: 12)
                             
                             HStack {
                                 Button(action: {
                                     self.totalRep -= 1
                                 }) {
                                     Text("-")
-                                        .foregroundStyle(Color.custWhite)
+                                        .foregroundStyle(Color.fontWhite)
                                 }
                                 .frame(width: 25, height: 25)
                                 .background(totalRep <= 6 ? Color.custGray : Color.custOrange)
@@ -140,7 +141,9 @@ struct GuidanceView: View {
                                 
                                 TextField("\(totalRep)", value: $totalRep, format: .number)
                                     .keyboardType(.numberPad)
-                                    .frame(width: 25)
+                                    .font(.largeTitle)
+                                    .bold()
+                                    .frame(width: 52)
                                     .multilineTextAlignment(.center)
                                     .padding(3)
                                     .overlay(
@@ -153,18 +156,17 @@ struct GuidanceView: View {
                                     self.totalRep += 1
                                 }) {
                                     Text("+")
-                                        .foregroundStyle(Color.custWhite)
+                                        .foregroundStyle(Color.fontWhite)
                                 }
                                 .frame(width: 25, height: 25)
                                 .background(totalRep >= 15 ? Color.custGray : Color.custOrange)
                                 .disabled(totalRep >= 15)
                                 .clipShape(RoundedRectangle(cornerRadius: 5))
-                                
-                                Spacer()
                             }
                         }
+                        Spacer()
                     }
-                    .padding(.horizontal)
+                    .padding()
                     
                     VStack {
                         Text("Instruksi")
@@ -217,7 +219,7 @@ struct GuidanceView: View {
                    
                     NavigationLink(destination: WorkoutCameraView()) {
                         Text("Mulai")
-                            .foregroundStyle(Color.custWhite)
+                            .foregroundStyle(Color.fontWhite)
                             .frame(maxWidth: .infinity, maxHeight: 40)
                             .background(Color.custOrange)
                             .clipShape(RoundedRectangle(cornerRadius: 20))

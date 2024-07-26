@@ -6,7 +6,7 @@ struct WorkoutListLocked: View {
     let subtitle: String
     
     var body: some View {
-        ZStack(alignment: .bottom) {
+        ZStack {
             VStack {
                 Spacer()
                 HStack {
