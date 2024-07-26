@@ -11,27 +11,23 @@
 		048D50B22C43BE9A00A60AC0 /* MC3_FitRepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D50B12C43BE9A00A60AC0 /* MC3_FitRepApp.swift */; };
 		048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B52C43BE9C00A60AC0 /* Assets.xcassets */; };
 		048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */; };
-		04A226EA2C4903CD007CB9E8 /* DonePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226E92C4903CD007CB9E8 /* DonePage.swift */; };
+		04A226EA2C4903CD007CB9E8 /* ExerciseDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226E92C4903CD007CB9E8 /* ExerciseDoneView.swift */; };
 		04A226EC2C4903EA007CB9E8 /* PulseIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226EB2C4903EA007CB9E8 /* PulseIndicator.swift */; };
-		04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */; };
-		04A226F02C490421007CB9E8 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226EF2C490421007CB9E8 /* PopUp.swift */; };
+		04A226EE2C49040E007CB9E8 /* PopUpGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226ED2C49040E007CB9E8 /* PopUpGuide.swift */; };
 		04A226F22C4E5F44007CB9E8 /* GuidanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */; };
 		2893384F2C509D6D0036B14B /* BicepCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2893384E2C509D6D0036B14B /* BicepCurlView.swift */; };
 		289338512C509DB30036B14B /* PredictionModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289338502C509DB30036B14B /* PredictionModelView.swift */; };
-		902007C42C524FE400021CA3 /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 902007C32C524FE400021CA3 /* start.mp3 */; };
+		902007C42C524FE400021CA3 /* Start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 902007C32C524FE400021CA3 /* Start.mp3 */; };
 		902007C62C52513200021CA3 /* GuidePertamaAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 902007C52C52513200021CA3 /* GuidePertamaAudio.mp3 */; };
 		902007C82C52535200021CA3 /* StartNGuidePertama.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 902007C72C52535200021CA3 /* StartNGuidePertama.mp3 */; };
 		9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035808D2C47AD8F00F0D2CD /* TimerView.swift */; };
 		9049D9B22C4F960800ABFCB4 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049D9B12C4F960800ABFCB4 /* AudioManager.swift */; };
-		9049D9B42C4F9ECF00ABFCB4 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049D9B32C4F9ECF00ABFCB4 /* ExerciseView.swift */; };
-		9049D9B62C4F9F2E00ABFCB4 /* CameraPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049D9B52C4F9F2E00ABFCB4 /* CameraPositionView.swift */; };
 		9049D9BA2C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */; };
 		9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */; };
 		AA1CEF592C4E5A2B006E6DE4 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */; };
 		AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */; };
 		AA1CEF602C4E6068006E6DE4 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */; };
 		AA1CEF622C4E6776006E6DE4 /* WorkoutListLocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */; };
-		AA1CEF642C4E6C1C006E6DE4 /* PreWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */; };
 		AA6D59C32C50DFE1008795C5 /* AVCaptureDevice+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59B02C50DFE1008795C5 /* AVCaptureDevice+FrameRate.swift */; };
 		AA6D59C42C50DFE1008795C5 /* AVCaptureDeviceInput+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59B12C50DFE1008795C5 /* AVCaptureDeviceInput+Camera.swift */; };
 		AA6D59C52C50DFE1008795C5 /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59B22C50DFE1008795C5 /* AVCaptureVideoDataOutput+PixelFormat.swift */; };
@@ -46,15 +42,14 @@
 		AA6D59CE2C50DFE1008795C5 /* Pose+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59BD2C50DFE1008795C5 /* Pose+Connection.swift */; };
 		AA6D59CF2C50DFE1008795C5 /* Pose+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59BE2C50DFE1008795C5 /* Pose+Empty.swift */; };
 		AA6D59D02C50DFE1008795C5 /* Pose+Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59BF2C50DFE1008795C5 /* Pose+Landmark.swift */; };
-		AA6D59D72C50EBF4008795C5 /* RepInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59D62C50EBF4008795C5 /* RepInfoButton.swift */; };
-		AA6D59D92C50ED40008795C5 /* bodyTutorial.gif in Resources */ = {isa = PBXBuildFile; fileRef = AA6D59D82C50ED40008795C5 /* bodyTutorial.gif */; };
+		AA6D59D72C50EBF4008795C5 /* SetRepInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59D62C50EBF4008795C5 /* SetRepInfoButton.swift */; };
 		AA6D59E62C50EF49008795C5 /* VideoPrecessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59E42C50EF49008795C5 /* VideoPrecessingChain.swift */; };
 		AA6D59ED2C5116EB008795C5 /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59EC2C5116EB008795C5 /* AnimatedImage.swift */; };
+		AACF90852C5392270034A7DE /* SetRepCounterOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACF90842C5392270034A7DE /* SetRepCounterOverlay.swift */; };
 		AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E42C47DFB5003FB64E /* CameraView.swift */; };
 		AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */; };
 		AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */; };
 		AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67EE2C47E002003FB64E /* ContentView.swift */; };
-		AAFD67F72C48EFC3003FB64E /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67F62C48EFC3003FB64E /* Predictor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,27 +58,23 @@
 		048D50B12C43BE9A00A60AC0 /* MC3_FitRepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_FitRepApp.swift; sourceTree = "<group>"; };
 		048D50B52C43BE9C00A60AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		04A226E92C4903CD007CB9E8 /* DonePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePage.swift; sourceTree = "<group>"; };
-		04A226EB2C4903EA007CB9E8 /* PulseIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseIndicator.swift; sourceTree = "<group>"; };
-		04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepCounterOvl.swift; sourceTree = "<group>"; };
-		04A226EF2C490421007CB9E8 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
-		04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceView.swift; sourceTree = "<group>"; };
-		2893384E2C509D6D0036B14B /* BicepCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepCurlView.swift; sourceTree = "<group>"; };
-		289338502C509DB30036B14B /* PredictionModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionModelView.swift; sourceTree = "<group>"; };
-		902007C32C524FE400021CA3 /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
+		04A226E92C4903CD007CB9E8 /* ExerciseDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseDoneView.swift; path = ../View/ExerciseDoneView.swift; sourceTree = "<group>"; };
+		04A226EB2C4903EA007CB9E8 /* PulseIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PulseIndicator.swift; path = ../../View/Component/PulseIndicator.swift; sourceTree = "<group>"; };
+		04A226ED2C49040E007CB9E8 /* PopUpGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopUpGuide.swift; path = ../../View/Component/PopUpGuide.swift; sourceTree = "<group>"; };
+		04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GuidanceView.swift; path = ../View/GuidanceView.swift; sourceTree = "<group>"; };
+		2893384E2C509D6D0036B14B /* BicepCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BicepCurlView.swift; path = ../View/BicepCurlView.swift; sourceTree = "<group>"; };
+		289338502C509DB30036B14B /* PredictionModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PredictionModelView.swift; path = ../ViewModel/PredictionModelView.swift; sourceTree = "<group>"; };
+		902007C32C524FE400021CA3 /* Start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Start.mp3; sourceTree = "<group>"; };
 		902007C52C52513200021CA3 /* GuidePertamaAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GuidePertamaAudio.mp3; sourceTree = "<group>"; };
 		902007C72C52535200021CA3 /* StartNGuidePertama.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StartNGuidePertama.mp3; sourceTree = "<group>"; };
-		9035808D2C47AD8F00F0D2CD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		9035808D2C47AD8F00F0D2CD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerView.swift; path = ../View/TimerView.swift; sourceTree = "<group>"; };
 		9049D9B12C4F960800ABFCB4 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		9049D9B32C4F9ECF00ABFCB4 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseView.swift; path = ../../ExerciseView.swift; sourceTree = "<group>"; };
-		9049D9B52C4F9F2E00ABFCB4 /* CameraPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraPositionView.swift; path = ../../CameraPositionView.swift; sourceTree = "<group>"; };
 		9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ArahanKameraAudio.mp3; sourceTree = "<group>"; };
 		9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CountDown1Sec.mp3; sourceTree = "<group>"; };
-		AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
-		AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
-		AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListLocked.swift; sourceTree = "<group>"; };
-		AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreWorkoutView.swift; sourceTree = "<group>"; };
+		AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutListView.swift; path = ../View/WorkoutListView.swift; sourceTree = "<group>"; };
+		AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutList.swift; path = ../../View/Component/WorkoutList.swift; sourceTree = "<group>"; };
+		AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBar.swift; path = ../../View/Component/NavigationBar.swift; sourceTree = "<group>"; };
+		AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutListLocked.swift; path = ../../View/Component/WorkoutListLocked.swift; sourceTree = "<group>"; };
 		AA6D59B02C50DFE1008795C5 /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
 		AA6D59B12C50DFE1008795C5 /* AVCaptureDeviceInput+Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Camera.swift"; sourceTree = "<group>"; };
 		AA6D59B22C50DFE1008795C5 /* AVCaptureVideoDataOutput+PixelFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoDataOutput+PixelFormat.swift"; sourceTree = "<group>"; };
@@ -98,15 +89,14 @@
 		AA6D59BD2C50DFE1008795C5 /* Pose+Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Connection.swift"; sourceTree = "<group>"; };
 		AA6D59BE2C50DFE1008795C5 /* Pose+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Empty.swift"; sourceTree = "<group>"; };
 		AA6D59BF2C50DFE1008795C5 /* Pose+Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Landmark.swift"; sourceTree = "<group>"; };
-		AA6D59D62C50EBF4008795C5 /* RepInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepInfoButton.swift; sourceTree = "<group>"; };
-		AA6D59D82C50ED40008795C5 /* bodyTutorial.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bodyTutorial.gif; sourceTree = "<group>"; };
+		AA6D59D62C50EBF4008795C5 /* SetRepInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetRepInfoButton.swift; path = ../../View/Component/SetRepInfoButton.swift; sourceTree = "<group>"; };
 		AA6D59E42C50EF49008795C5 /* VideoPrecessingChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPrecessingChain.swift; sourceTree = "<group>"; };
-		AA6D59EC2C5116EB008795C5 /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImage.swift; sourceTree = "<group>"; };
-		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
-		AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		AAFD67EE2C47E002003FB64E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AAFD67F62C48EFC3003FB64E /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		AA6D59EC2C5116EB008795C5 /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimatedImage.swift; path = ../../View/Component/AnimatedImage.swift; sourceTree = "<group>"; };
+		AACF90842C5392270034A7DE /* SetRepCounterOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetRepCounterOverlay.swift; path = "MC3-FitRep/View/SetRepCounterOverlay.swift"; sourceTree = SOURCE_ROOT; };
+		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = ../View/CameraView.swift; sourceTree = "<group>"; };
+		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewModel.swift; path = ../ViewModel/CameraViewModel.swift; sourceTree = "<group>"; };
+		AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = ../ViewModel/CameraViewController.swift; sourceTree = "<group>"; };
+		AAFD67EE2C47E002003FB64E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../View/ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +147,6 @@
 		048D50B72C43BE9C00A60AC0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AA6D59D82C50ED40008795C5 /* bodyTutorial.gif */,
 				048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -168,7 +157,7 @@
 			children = (
 				902007C72C52535200021CA3 /* StartNGuidePertama.mp3 */,
 				902007C52C52513200021CA3 /* GuidePertamaAudio.mp3 */,
-				902007C32C524FE400021CA3 /* start.mp3 */,
+				902007C32C524FE400021CA3 /* Start.mp3 */,
 				9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */,
 				9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */,
 			);
@@ -180,9 +169,12 @@
 			children = (
 				AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */,
 				AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */,
-				AA6D59D62C50EBF4008795C5 /* RepInfoButton.swift */,
+				AA6D59D62C50EBF4008795C5 /* SetRepInfoButton.swift */,
 				AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */,
 				AA6D59EC2C5116EB008795C5 /* AnimatedImage.swift */,
+				04A226ED2C49040E007CB9E8 /* PopUpGuide.swift */,
+				04A226EB2C4903EA007CB9E8 /* PulseIndicator.swift */,
+				AACF90842C5392270034A7DE /* SetRepCounterOverlay.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -234,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				043990C32C52403200687CE9 /* BicepCurl.mlmodel */,
-				AAFD67F62C48EFC3003FB64E /* Predictor.swift */,
 				9049D9B12C4F960800ABFCB4 /* AudioManager.swift */,
 			);
 			path = Model;
@@ -247,15 +238,9 @@
 				AAFD67EE2C47E002003FB64E /* ContentView.swift */,
 				AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */,
 				04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */,
-				9049D9B52C4F9F2E00ABFCB4 /* CameraPositionView.swift */,
-				9049D9B32C4F9ECF00ABFCB4 /* ExerciseView.swift */,
-				AA1CEF632C4E6C1C006E6DE4 /* PreWorkoutView.swift */,
 				AAFD67E42C47DFB5003FB64E /* CameraView.swift */,
 				9035808D2C47AD8F00F0D2CD /* TimerView.swift */,
-				04A226E92C4903CD007CB9E8 /* DonePage.swift */,
-				04A226EB2C4903EA007CB9E8 /* PulseIndicator.swift */,
-				04A226ED2C49040E007CB9E8 /* SetRepCounterOvl.swift */,
-				04A226EF2C490421007CB9E8 /* PopUp.swift */,
+				04A226E92C4903CD007CB9E8 /* ExerciseDoneView.swift */,
 				2893384E2C509D6D0036B14B /* BicepCurlView.swift */,
 			);
 			name = View;
@@ -333,9 +318,8 @@
 			files = (
 				902007C82C52535200021CA3 /* StartNGuidePertama.mp3 in Resources */,
 				9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */,
-				902007C42C524FE400021CA3 /* start.mp3 in Resources */,
+				902007C42C524FE400021CA3 /* Start.mp3 in Resources */,
 				048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */,
-				AA6D59D92C50ED40008795C5 /* bodyTutorial.gif in Resources */,
 				9049D9BA2C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 in Resources */,
 				048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */,
 				902007C62C52513200021CA3 /* GuidePertamaAudio.mp3 in Resources */,
@@ -349,15 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9049D9B42C4F9ECF00ABFCB4 /* ExerciseView.swift in Sources */,
-				04A226EA2C4903CD007CB9E8 /* DonePage.swift in Sources */,
-				AA1CEF642C4E6C1C006E6DE4 /* PreWorkoutView.swift in Sources */,
+				04A226EA2C4903CD007CB9E8 /* ExerciseDoneView.swift in Sources */,
 				2893384F2C509D6D0036B14B /* BicepCurlView.swift in Sources */,
 				AA6D59CA2C50DFE1008795C5 /* ExerciseClassifier+LabelCheck.swift in Sources */,
 				9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */,
 				AA6D59C62C50DFE1008795C5 /* Video Capture.swift in Sources */,
 				AA6D59ED2C5116EB008795C5 /* AnimatedImage.swift in Sources */,
-				9049D9B62C4F9F2E00ABFCB4 /* CameraPositionView.swift in Sources */,
 				048D50B22C43BE9A00A60AC0 /* MC3_FitRepApp.swift in Sources */,
 				043990C42C52403200687CE9 /* BicepCurl.mlmodel in Sources */,
 				AA6D59E62C50EF49008795C5 /* VideoPrecessingChain.swift in Sources */,
@@ -378,18 +359,17 @@
 				AA6D59CF2C50DFE1008795C5 /* Pose+Empty.swift in Sources */,
 				AA6D59CE2C50DFE1008795C5 /* Pose+Connection.swift in Sources */,
 				04A226EC2C4903EA007CB9E8 /* PulseIndicator.swift in Sources */,
-				04A226EE2C49040E007CB9E8 /* SetRepCounterOvl.swift in Sources */,
+				04A226EE2C49040E007CB9E8 /* PopUpGuide.swift in Sources */,
 				AA6D59CC2C50DFE1008795C5 /* ExerciseClassifier+Singleton.swift in Sources */,
 				AA6D59CB2C50DFE1008795C5 /* ExerciseClassifier+PredictAction.swift in Sources */,
-				AA6D59D72C50EBF4008795C5 /* RepInfoButton.swift in Sources */,
+				AA6D59D72C50EBF4008795C5 /* SetRepInfoButton.swift in Sources */,
+				AACF90852C5392270034A7DE /* SetRepCounterOverlay.swift in Sources */,
 				AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */,
 				AA6D59C42C50DFE1008795C5 /* AVCaptureDeviceInput+Camera.swift in Sources */,
 				AA1CEF622C4E6776006E6DE4 /* WorkoutListLocked.swift in Sources */,
 				AA6D59CD2C50DFE1008795C5 /* Pose.swift in Sources */,
 				AA1CEF592C4E5A2B006E6DE4 /* WorkoutListView.swift in Sources */,
-				AAFD67F72C48EFC3003FB64E /* Predictor.swift in Sources */,
 				04A226F22C4E5F44007CB9E8 /* GuidanceView.swift in Sources */,
-				04A226F02C490421007CB9E8 /* PopUp.swift in Sources */,
 				AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,7 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitRep/Preview Content\"";
-				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
+				DEVELOPMENT_TEAM = TCTRPSM3Y8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
@@ -559,7 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
+				DEVELOPMENT_TEAM = TCTRPSM3Y8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
