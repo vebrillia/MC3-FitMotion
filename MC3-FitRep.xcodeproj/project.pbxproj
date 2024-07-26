@@ -59,8 +59,8 @@
 		048D50B52C43BE9C00A60AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048D50B82C43BE9C00A60AC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04A226E92C4903CD007CB9E8 /* ExerciseDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExerciseDoneView.swift; path = ../View/ExerciseDoneView.swift; sourceTree = "<group>"; };
-		04A226EB2C4903EA007CB9E8 /* PulseIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PulseIndicator.swift; path = ../../View/Component/PulseIndicator.swift; sourceTree = "<group>"; };
-		04A226ED2C49040E007CB9E8 /* PopUpGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopUpGuide.swift; path = ../../View/Component/PopUpGuide.swift; sourceTree = "<group>"; };
+		04A226EB2C4903EA007CB9E8 /* PulseIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PulseIndicator.swift; path = "MC3-FitRep/View/Component/PulseIndicator.swift"; sourceTree = "<group>"; };
+		04A226ED2C49040E007CB9E8 /* PopUpGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopUpGuide.swift; path = "MC3-FitRep/View/Component/PopUpGuide.swift"; sourceTree = "<group>"; };
 		04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GuidanceView.swift; path = ../View/GuidanceView.swift; sourceTree = "<group>"; };
 		2893384E2C509D6D0036B14B /* BicepCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BicepCurlView.swift; path = ../View/BicepCurlView.swift; sourceTree = "<group>"; };
 		289338502C509DB30036B14B /* PredictionModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PredictionModelView.swift; path = ../ViewModel/PredictionModelView.swift; sourceTree = "<group>"; };
@@ -72,9 +72,9 @@
 		9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ArahanKameraAudio.mp3; sourceTree = "<group>"; };
 		9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CountDown1Sec.mp3; sourceTree = "<group>"; };
 		AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutListView.swift; path = ../View/WorkoutListView.swift; sourceTree = "<group>"; };
-		AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutList.swift; path = ../../View/Component/WorkoutList.swift; sourceTree = "<group>"; };
-		AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBar.swift; path = ../../View/Component/NavigationBar.swift; sourceTree = "<group>"; };
-		AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutListLocked.swift; path = ../../View/Component/WorkoutListLocked.swift; sourceTree = "<group>"; };
+		AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutList.swift; path = "MC3-FitRep/View/Component/WorkoutList.swift"; sourceTree = "<group>"; };
+		AA1CEF5F2C4E6068006E6DE4 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBar.swift; path = "MC3-FitRep/View/Component/NavigationBar.swift"; sourceTree = "<group>"; };
+		AA1CEF612C4E6776006E6DE4 /* WorkoutListLocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutListLocked.swift; path = "MC3-FitRep/View/Component/WorkoutListLocked.swift"; sourceTree = "<group>"; };
 		AA6D59B02C50DFE1008795C5 /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
 		AA6D59B12C50DFE1008795C5 /* AVCaptureDeviceInput+Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDeviceInput+Camera.swift"; sourceTree = "<group>"; };
 		AA6D59B22C50DFE1008795C5 /* AVCaptureVideoDataOutput+PixelFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoDataOutput+PixelFormat.swift"; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 		AA6D59BD2C50DFE1008795C5 /* Pose+Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Connection.swift"; sourceTree = "<group>"; };
 		AA6D59BE2C50DFE1008795C5 /* Pose+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Empty.swift"; sourceTree = "<group>"; };
 		AA6D59BF2C50DFE1008795C5 /* Pose+Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pose+Landmark.swift"; sourceTree = "<group>"; };
-		AA6D59D62C50EBF4008795C5 /* SetRepInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetRepInfoButton.swift; path = ../../View/Component/SetRepInfoButton.swift; sourceTree = "<group>"; };
+		AA6D59D62C50EBF4008795C5 /* SetRepInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetRepInfoButton.swift; path = "MC3-FitRep/View/Component/SetRepInfoButton.swift"; sourceTree = "<group>"; };
 		AA6D59E42C50EF49008795C5 /* VideoPrecessingChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPrecessingChain.swift; sourceTree = "<group>"; };
-		AA6D59EC2C5116EB008795C5 /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimatedImage.swift; path = ../../View/Component/AnimatedImage.swift; sourceTree = "<group>"; };
+		AA6D59EC2C5116EB008795C5 /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimatedImage.swift; path = "MC3-FitRep/View/Component/AnimatedImage.swift"; sourceTree = "<group>"; };
 		AACF90842C5392270034A7DE /* SetRepCounterOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetRepCounterOverlay.swift; path = "MC3-FitRep/View/SetRepCounterOverlay.swift"; sourceTree = SOURCE_ROOT; };
 		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = ../View/CameraView.swift; sourceTree = "<group>"; };
 		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewModel.swift; path = ../ViewModel/CameraViewModel.swift; sourceTree = "<group>"; };
