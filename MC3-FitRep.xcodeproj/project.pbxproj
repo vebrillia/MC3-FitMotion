@@ -46,8 +46,6 @@
 		AA6D59E62C50EF49008795C5 /* VideoPrecessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D59E42C50EF49008795C5 /* VideoPrecessingChain.swift */; };
 		AACF90852C5392270034A7DE /* SetRepCounterOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACF90842C5392270034A7DE /* SetRepCounterOverlay.swift */; };
 		AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E42C47DFB5003FB64E /* CameraView.swift */; };
-		AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */; };
-		AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */; };
 		AAFD67EF2C47E002003FB64E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFD67EE2C47E002003FB64E /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,8 +90,6 @@
 		AA6D59E42C50EF49008795C5 /* VideoPrecessingChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPrecessingChain.swift; sourceTree = "<group>"; };
 		AACF90842C5392270034A7DE /* SetRepCounterOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetRepCounterOverlay.swift; path = "MC3-FitRep/View/SetRepCounterOverlay.swift"; sourceTree = SOURCE_ROOT; };
 		AAFD67E42C47DFB5003FB64E /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = ../View/CameraView.swift; sourceTree = "<group>"; };
-		AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewModel.swift; path = ../ViewModel/CameraViewModel.swift; sourceTree = "<group>"; };
-		AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = ../ViewModel/CameraViewController.swift; sourceTree = "<group>"; };
 		AAFD67EE2C47E002003FB64E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../View/ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,8 +244,6 @@
 		AAFD67EC2C47DFCE003FB64E /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				AAFD67E62C47DFB5003FB64E /* CameraViewController.swift */,
-				AAFD67E52C47DFB5003FB64E /* CameraViewModel.swift */,
 				289338502C509DB30036B14B /* PredictionModelView.swift */,
 			);
 			name = "View Model";
@@ -352,7 +346,6 @@
 				AAFD67E72C47DFB5003FB64E /* CameraView.swift in Sources */,
 				289338512C509DB30036B14B /* PredictionModelView.swift in Sources */,
 				AA6D59C82C50DFE1008795C5 /* ExerciseClassifier+FrameRate.swift in Sources */,
-				AAFD67E92C47DFB5003FB64E /* CameraViewController.swift in Sources */,
 				AA6D59CF2C50DFE1008795C5 /* Pose+Empty.swift in Sources */,
 				AA6D59CE2C50DFE1008795C5 /* Pose+Connection.swift in Sources */,
 				04A226EC2C4903EA007CB9E8 /* PulseIndicator.swift in Sources */,
@@ -367,7 +360,6 @@
 				AA6D59CD2C50DFE1008795C5 /* Pose.swift in Sources */,
 				AA1CEF592C4E5A2B006E6DE4 /* WorkoutListView.swift in Sources */,
 				04A226F22C4E5F44007CB9E8 /* GuidanceView.swift in Sources */,
-				AAFD67E82C47DFB5003FB64E /* CameraViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
