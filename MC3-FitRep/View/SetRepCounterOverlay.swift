@@ -52,13 +52,13 @@ struct SetRepCounterOverlay: View {//nanti diganti ke viewmodif
                                 .frame(maxWidth: .infinity)
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.white)
-                                .font(.system(size: 17))
+                                .font(.system(size: 28))
                                 .fontWeight(.semibold)
                             Text("Sets")
                                 .frame(maxWidth: .infinity)
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.white)
-                                .font(.system(size: 13))
+                                .font(.system(size: 20))
                                 .fontWeight(.regular)
                         }
                         

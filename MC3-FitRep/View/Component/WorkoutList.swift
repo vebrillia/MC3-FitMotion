@@ -44,7 +44,7 @@ struct WorkoutList: View {
                     Image(image)
                         .resizable()
                         .scaledToFill()
-                        .shadow(color: Color.custBlack.opacity(0.2), radius: 0, x: 4, y: 4)
+                        .shadow(color: Color.fontBlack.opacity(0.2), radius: 0, x: 4, y: 4)
                         .frame(width: 180, height: 110, alignment: .top)
                         .clipped()
                         .padding(.trailing, 40)

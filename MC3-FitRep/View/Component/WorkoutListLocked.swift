@@ -35,7 +35,7 @@ struct WorkoutListLocked: View {
         .padding()
         .frame(height: 100)
         .background(Color.custGray)
-        .foregroundStyle(Color.custWhite)
+        .foregroundStyle(Color.fontWhite)
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .padding(.horizontal)
         .frame(height: 100)
