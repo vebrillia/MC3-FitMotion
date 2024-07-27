@@ -15,11 +15,12 @@ class PredictionViewModel: ObservableObject {
     @Published var confidence: String = ""
     @Published var benarCount: Int = 0
     @Published var salahCount: Int = 0
+    @Published var pulseIndicator: Int = 0
     @Published var indicator: Bool = false
     var recognizedPoints: [CGPoint] = []
 
     
-    // Properties to track "Benar" frames
+    // Properties to track "Output" frames
     private var benarFrameCount: Int = 0
     private var salahFrameCount: Int = 0
     private var idleFrameCount: Int = 0
@@ -73,6 +74,7 @@ class PredictionViewModel: ObservableObject {
                     if self.benarFrameCount >= 3 {
                         self.pausePrediction()
                         self.benarCount += 1
+                        self.pulseIndicator = 1
                     }
                 } else if prediction.label == "Salah" {
                     self.salahFrameCount += 1
@@ -82,14 +84,16 @@ class PredictionViewModel: ObservableObject {
                     if self.salahFrameCount >= 3 {
                         self.pausePrediction()
                         self.salahCount += 1
+                        self.pulseIndicator = 2
                     }
                 }
                 else if prediction.label == "Idle"  {
-                              self.idleFrameCount += 1
-                              self.benarFrameCount = 0
-                              self.salahFrameCount = 0
-                              print("--IDLE--")
-                          }
+                    self.idleFrameCount += 1
+                    self.benarFrameCount = 0
+                    self.salahFrameCount = 0
+                    self.pulseIndicator = 0
+                    print("--IDLE--")
+                }
             }
             else{
                 if prediction.label == "Idle"{
@@ -178,13 +182,13 @@ private extension PredictionViewModel {
             let imageRectangle = CGRect(origin: .zero, size: frameSize)
             cgContext.draw(frame, in: imageRectangle)
 
-            let pointTransform = CGAffineTransform(scaleX: frameSize.width, y: frameSize.height)
-
-            guard let poses = poses else { return }
-
-            for pose in poses {
-                pose.drawWireframeToContext(cgContext, applying: pointTransform)
-            }
+//            let pointTransform = CGAffineTransform(scaleX: frameSize.width, y: frameSize.height)
+//
+//            guard let poses = poses else { return }
+//
+//            for pose in poses {
+//                pose.drawWireframeToContext(cgContext, applying: pointTransform)
+//            }
         }
 
         DispatchQueue.main.async { self.currentFrame = frameWithPosesRendering }
