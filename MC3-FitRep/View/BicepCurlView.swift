@@ -161,11 +161,18 @@ struct BicepCurlView: View {
             
             if navigateToExerciseView {
                 predictionLabels
-                    .onChange(of: isRestTime){
-                        if isRestTime {
+                    .fullScreenCover(isPresented: $isRestTime) {
+                        ZStack {
+                            Color.clear
+                                .blur(radius: 2)
+                                .ignoresSafeArea(.all)
+                            
                             TimerView(isRestTime: $isRestTime)
-                            selectedSet += 1
-                        }}
+                                .onAppear {
+                                    selectedSet += 1
+                                }
+                        }
+                    }
                     .onChange(of:selectedSet){
                         if selectedSet > 2 {
                             ExerciseDoneView(totalSet: $totalSet, totalRep: $totalRep)
@@ -173,7 +180,7 @@ struct BicepCurlView: View {
                     }
             } else {
                 StartView
-                    .swipableAlert(isPresented: $popUpPresented)
+                    
             }
             
         }
@@ -189,6 +196,8 @@ struct BicepCurlView: View {
                     predictionVM.videoCapture.updateDeviceOrientation()
                 }
         .blur(radius: isRestTime ? 10 : 0)
+        .swipableAlert(isPresented: $popUpPresented)
+        .toolbar(.hidden)
     }//VIEW UTAMA INCLUDE CAMERA
 }
 
