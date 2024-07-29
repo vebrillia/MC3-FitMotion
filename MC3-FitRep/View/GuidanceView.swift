@@ -229,7 +229,7 @@ struct GuidanceView: View {
                 VStack {
                     Spacer()
                    
-                    NavigationLink(destination: BicepCurlView()) {
+                    NavigationLink(destination: BicepCurlView(totalSet: $totalSet, totalRep: $totalRep)) {
                         Text("Mulai")
                             .foregroundStyle(Color.fontWhite)
                             .frame(maxWidth: .infinity, maxHeight: 40)
@@ -245,8 +245,4 @@ struct GuidanceView: View {
             .navigationBarTitleDisplayMode(.large)
         }
     }
-}
-
-#Preview {
-    GuidanceView()
 }

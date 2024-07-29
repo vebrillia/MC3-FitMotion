@@ -228,10 +228,10 @@
 			children = (
 				AA1CEF5C2C4E5B1E006E6DE4 /* Component */,
 				AAFD67EE2C47E002003FB64E /* ContentView.swift */,
+				9035808D2C47AD8F00F0D2CD /* TimerView.swift */,
 				AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */,
 				04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */,
 				2893384E2C509D6D0036B14B /* BicepCurlView.swift */,
-				9035808D2C47AD8F00F0D2CD /* TimerView.swift */,
 				04A226E92C4903CD007CB9E8 /* ExerciseDoneView.swift */,
 			);
 			name = View;

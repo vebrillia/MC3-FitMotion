@@ -8,20 +8,17 @@
 import SwiftUI
 
 
-//struct OverlaySetRepCounter: ViewModifier {
 struct SetRepCounterOverlay: View {//nanti diganti ke viewmodif
     @State var set: Int = 1 //Nanti ada inputnya ini udah set keberapa
     @State var rep: Int = 1 //Nanti ada inputnya ini udah rep keberapa
     
-    @Binding var totalset: Int//Next iterasi bisa custom total set & rep
+    @Binding var totalset: Int
     @Binding var totalrep: Int
-    @State var selectedSet: Int = 0
+    @Binding var selectedSet: Int
     
-    //    func body(content: Content) -> some View {
-    var body: some View { //nanti diganti balik
+
+    var body: some View {
         ZStack{
-            //            content
-            
             VStack{
                 ZStack (alignment: .top){
                     VStack {
@@ -41,7 +38,7 @@ struct SetRepCounterOverlay: View {//nanti diganti ke viewmodif
                         HStack (spacing:7){
                             ForEach(0..<totalset, id: \.self) { numberSet in
                                 RoundedRectangle(cornerRadius: 20)
-                                    .fill(selectedSet == numberSet ? .white :Color("CustGray"))
+                                    .fill(selectedSet == numberSet ? .white :Color.custGray)
                                     .frame(maxWidth: .infinity, maxHeight: 3)
                             }
                         }.padding(.horizontal)
@@ -95,5 +92,5 @@ struct SetRepCounterOverlay: View {//nanti diganti ke viewmodif
 
 
 #Preview {
-    SetRepCounterOverlay(totalset: .constant(3), totalrep: .constant(12))
+    SetRepCounterOverlay(totalset: .constant(3), totalrep: .constant(12), selectedSet: .constant(0))
 }

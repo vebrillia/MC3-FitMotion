@@ -27,8 +27,8 @@ struct BicepCurlView: View {
     @State var animatePulse = false
     @State private var bodypose: Int = 0 //minta info dari camera
     @State private var sizeStatus: Int = 0 //untuk ngambil data berapa ukuran modifier pulse
-    @State private var totalSet: Int = 0
-    @State private var totalRep: Int = 0
+    @Binding var totalSet: Int
+    @Binding var totalRep: Int
 
     @StateObject var predictionVM = PredictionViewModel()
     @State private var boxColor: Color = .gray.opacity(0.5)
@@ -38,6 +38,12 @@ struct BicepCurlView: View {
     @State private var timer: Timer?
     @State private var navigateToExerciseView = false
     let boxFrame = CGRect(x: 50, y: 100, width: 325, height: 650)
+    
+    //move page
+    @State var isRestTime: Bool = false
+    
+    //overlay
+    @State var selectedSet: Int = 0
     
     func startCountdown() {
         isCountingDown = true
@@ -77,7 +83,7 @@ struct BicepCurlView: View {
     
     var predictionLabels: some View {
         ZStack {
-            SetRepCounterOverlay(totalset: $totalSet, totalrep: $totalRep)
+            SetRepCounterOverlay(totalset: $totalSet, totalrep: $totalRep, selectedSet: $selectedSet)
             
             VStack {
 //                switchCamera
@@ -94,6 +100,11 @@ struct BicepCurlView: View {
                             .padding(.bottom,100)
                             .bold()
                             .foregroundColor(.white)
+                            .onChange(of:predictionVM.benarCount)
+                        {if predictionVM.benarCount == totalRep {
+                            isRestTime = true
+                            //KASIH CODE UNTUK BERHENTIIN AKTIVITAS CAMERA, nanti kalau isRestTime false jalan lagi dan showrest ikut jadi false.     selectedSet += 1
+                            }}
 //                        Text("Wrong: \(predictionVM.salahCount)")
                     }
                 }
@@ -105,7 +116,7 @@ struct BicepCurlView: View {
                 audioManager.playSoundEffect(named: "StartNGuidePertama")
             }
         }
-    }
+    }//OVERLAY PAS GERAK
     
     var StartView: some View {
         VStack {
@@ -136,7 +147,7 @@ struct BicepCurlView: View {
                 resetCountdown()
             }
         }
-    }
+    }//OVERLAY ATUR POSISI ORANGNYA
     
     var body: some View {
         ZStack {
@@ -147,6 +158,16 @@ struct BicepCurlView: View {
 
             if navigateToExerciseView {
                 predictionLabels
+                    .onChange(of: isRestTime){
+                        if isRestTime {
+                            TimerView(isRestTime: $isRestTime)
+                            selectedSet += 1
+                        }}
+                    .onChange(of:selectedSet){
+                        if selectedSet > 2 {
+                            ExerciseDoneView(totalSet: $totalSet, totalRep: $totalRep)
+                        }
+                    }
             } else {
                 StartView
 
@@ -163,7 +184,8 @@ struct BicepCurlView: View {
                     _ in
                     predictionVM.videoCapture.updateDeviceOrientation()
                 }
-    }
+        .blur(radius: isRestTime ? 10 : 0)
+    }//VIEW UTAMA INCLUDE CAMERA
 }
 
 struct PulseView: View {
@@ -199,7 +221,7 @@ struct PulseView: View {
         .onChange(of: predictionVM.predicted) { newValue in
             bodypose = predictionVM.pulseIndicator
         }
-    }
+    }//PulseCircle
     
     func pulseColor(_ bodypose: Int) -> Color {
         if bodypose == 1 {
@@ -210,7 +232,7 @@ struct PulseView: View {
             return Color.gray
         }
     }
-}
+}//Pulse
 
 #Preview {
     PulseView(predictionVM: PredictionViewModel(), animatePulse: .constant(true), bodypose: .constant(1))
