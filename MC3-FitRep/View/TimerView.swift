@@ -14,12 +14,11 @@ struct TimerView: View  {
     @State private var offset: CGFloat = 0
     @State private var progress: CGFloat = 1.0
     @State private var timeRemaining = 30
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
     
     
     var body: some View {
         if isRestTime {
-            
             VStack{
                 ZStack {
                     Circle()
@@ -44,6 +43,7 @@ struct TimerView: View  {
                             .font(.system(size: 48))
                             .fontWeight(.semibold)
                             .onReceive(timer) { _ in
+                                print("On receice", timer)
                                 if timeRemaining > 0 {
                                     timeRemaining -= 1
                                     progress = CGFloat(timeRemaining) / 30.0
@@ -76,6 +76,10 @@ struct TimerView: View  {
                 .cornerRadius(10)
                 .shadow(radius: 10)
                 .offset(y: offset)
+                .onAppear{
+                    timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+                    print("Jalan??", isRestTime)
+                }
             //VStack untuk background only
         }
     }

@@ -104,7 +104,7 @@ struct BicepCurlView: View {
                             .bold()
                             .foregroundColor(.white)
                             .onChange(of:predictionVM.benarCount)
-                        {if predictionVM.benarCount == totalRep {
+                        {if predictionVM.benarCount == 2 {
                             isRestTime = true
                             //KASIH CODE UNTUK BERHENTIIN AKTIVITAS CAMERA, nanti kalau isRestTime false jalan lagi dan showrest ikut jadi false.     selectedSet += 1
                             }}
@@ -158,21 +158,19 @@ struct BicepCurlView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
+                .fullScreenCover(isPresented: $isRestTime) {
+                    ZStack {
+                        TimerView(isRestTime: $isRestTime)
+                            .onAppear {
+                                selectedSet += 1
+                            }
+                    }
+                    .presentationBackground(Color.clear.opacity(0.5))
+                }
+                
             
             if navigateToExerciseView {
                 predictionLabels
-                    .fullScreenCover(isPresented: $isRestTime) {
-                        ZStack {
-                            Color.clear
-                                .blur(radius: 2)
-                                .ignoresSafeArea(.all)
-                            
-                            TimerView(isRestTime: $isRestTime)
-                                .onAppear {
-                                    selectedSet += 1
-                                }
-                        }
-                    }
                     .onChange(of:selectedSet){
                         if selectedSet > 2 {
                             ExerciseDoneView(totalSet: $totalSet, totalRep: $totalRep)
