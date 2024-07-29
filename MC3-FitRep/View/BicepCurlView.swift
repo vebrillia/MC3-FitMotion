@@ -184,6 +184,8 @@ struct BicepCurlView: View {
             }
             
         }
+        
+        .toolbar(.hidden)
         //        .padding()
         .onAppear {
             predictionVM.updateUILabels(with: .startingPrediction)
@@ -197,7 +199,6 @@ struct BicepCurlView: View {
                 }
         .blur(radius: isRestTime ? 10 : 0)
         .swipableAlert(isPresented: $popUpPresented)
-        .toolbar(.hidden)
     }//VIEW UTAMA INCLUDE CAMERA
 }
 
