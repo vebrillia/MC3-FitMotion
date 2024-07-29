@@ -18,6 +18,8 @@ struct AnimatedImage: View {
                     currentFrame += 1
                 }
             }
+            .scaleEffect(x: -1, y: 1)
+            .padding(.leading, 32)
     }
 }
 

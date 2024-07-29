@@ -37,6 +37,9 @@ struct BicepCurlView: View {
     @State private var isCountingDown = false
     @State private var timer: Timer?
     @State private var navigateToExerciseView = false
+    
+    @State var popUpPresented: Bool = true
+    
     let boxFrame = CGRect(x: 50, y: 100, width: 325, height: 650)
     
     //move page
@@ -155,7 +158,7 @@ struct BicepCurlView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
-
+            
             if navigateToExerciseView {
                 predictionLabels
                     .onChange(of: isRestTime){
@@ -170,10 +173,11 @@ struct BicepCurlView: View {
                     }
             } else {
                 StartView
-
+                    .swipableAlert(isPresented: $popUpPresented)
             }
+            
         }
-//        .padding()
+        //        .padding()
         .onAppear {
             predictionVM.updateUILabels(with: .startingPrediction)
         }
