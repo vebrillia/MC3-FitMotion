@@ -104,10 +104,14 @@ struct BicepCurlView: View {
                             .bold()
                             .foregroundColor(.white)
                             .onChange(of:predictionVM.benarCount)
-                        {if predictionVM.benarCount == 2 {
-                            isRestTime = true
-                            //KASIH CODE UNTUK BERHENTIIN AKTIVITAS CAMERA, nanti kalau isRestTime false jalan lagi dan showrest ikut jadi false.     selectedSet += 1
-                            }}
+                        {
+                            if predictionVM.benarCount == totalRep {
+                                isRestTime = true
+                                predictionVM.benarCount = 0
+                                //KASIH CODE UNTUK BERHENTIIN AKTIVITAS CAMERA, nanti kalau isRestTime false jalan lagi dan showrest ikut jadi false.     selectedSet += 1
+                            }
+                            
+                        }
 //                        Text("Wrong: \(predictionVM.salahCount)")
                     }
                 }
@@ -116,6 +120,7 @@ struct BicepCurlView: View {
                 
             }
             .onAppear {
+                audioManager.stopAllSounds()
                 audioManager.playSoundEffect(named: "StartNGuidePertama")
             }
         }
@@ -170,16 +175,20 @@ struct BicepCurlView: View {
                 
             
             if navigateToExerciseView {
-                predictionLabels
-                    .onChange(of:selectedSet){
-                        if selectedSet > 2 {
-                            ExerciseDoneView(totalSet: $totalSet, totalRep: $totalRep)
-                        }
+                        predictionLabels
+                            .onChange(of: selectedSet) { newValue in
+                                if newValue == totalSet {
+                                    navigateToExerciseView = false
+                                    isRestTime = false
+                                }
+                            }
+                    } else {
+                        StartView
                     }
-            } else {
-                StartView
                     
-            }
+                    if selectedSet >= totalSet {
+                        ExerciseDoneView(totalSet: $totalSet, totalRep: $totalRep)
+                    }
             
         }
         

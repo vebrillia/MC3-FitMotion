@@ -15,11 +15,32 @@ struct ExerciseDoneView: View {
         ZStack {
             Color.custWhite.edgesIgnoringSafeArea(.all) //background
             VStack{
-                Image("DoneExercise")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width:350,height:100)
                 
+                    ZStack {
+                        Image("LeftSpark")
+                            .frame(height: 100)
+                            .padding(.top, -20)
+                            .padding(.leading, -180)
+                    
+                    
+                        Spacer()
+                    
+                    Text("You've Done it!")
+                        .foregroundColor(Color.custBlack)
+                        .font(.system(size: 40))
+                        .bold()
+                        .shadow(color: .black, radius: 1, x: 0.5, y: 1) 
+                    
+                    Spacer()
+                    
+                    Image("RightSpark")
+                        .frame(height: 100)
+                        .padding(.top, 20)
+                        .padding(.leading, 280)
+                
+                }
+
+
                 ZStack{
                     //Code circle
                     Circle()

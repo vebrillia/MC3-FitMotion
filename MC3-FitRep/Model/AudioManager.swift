@@ -34,4 +34,8 @@ class AudioManager: ObservableObject{
             print("Could not load sound effect: \(error)")
         }
     }
+    
+    func stopAllSounds() {
+        effectPlayer?.stop()
+        }
 }

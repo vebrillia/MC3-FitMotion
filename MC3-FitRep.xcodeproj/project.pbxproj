@@ -16,12 +16,12 @@
 		04A226F22C4E5F44007CB9E8 /* GuidanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */; };
 		2893384F2C509D6D0036B14B /* BicepCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2893384E2C509D6D0036B14B /* BicepCurlView.swift */; };
 		289338512C509DB30036B14B /* PredictionModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289338502C509DB30036B14B /* PredictionModelView.swift */; };
+		9019FC312C58A5800006F04C /* ArahanKameraAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9019FC302C58A5800006F04C /* ArahanKameraAudio.mp3 */; };
 		902007C42C524FE400021CA3 /* Start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 902007C32C524FE400021CA3 /* Start.mp3 */; };
 		902007C62C52513200021CA3 /* GuidePertamaAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 902007C52C52513200021CA3 /* GuidePertamaAudio.mp3 */; };
 		902007C82C52535200021CA3 /* StartNGuidePertama.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 902007C72C52535200021CA3 /* StartNGuidePertama.mp3 */; };
 		9035808E2C47AD8F00F0D2CD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035808D2C47AD8F00F0D2CD /* TimerView.swift */; };
 		9049D9B22C4F960800ABFCB4 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049D9B12C4F960800ABFCB4 /* AudioManager.swift */; };
-		9049D9BA2C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */; };
 		9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */; };
 		AA1CEF592C4E5A2B006E6DE4 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */; };
 		AA1CEF5B2C4E5B18006E6DE4 /* WorkoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */; };
@@ -60,12 +60,12 @@
 		04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GuidanceView.swift; path = ../View/GuidanceView.swift; sourceTree = "<group>"; };
 		2893384E2C509D6D0036B14B /* BicepCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BicepCurlView.swift; path = ../View/BicepCurlView.swift; sourceTree = "<group>"; };
 		289338502C509DB30036B14B /* PredictionModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PredictionModelView.swift; path = ../ViewModel/PredictionModelView.swift; sourceTree = "<group>"; };
+		9019FC302C58A5800006F04C /* ArahanKameraAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ArahanKameraAudio.mp3; sourceTree = "<group>"; };
 		902007C32C524FE400021CA3 /* Start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Start.mp3; sourceTree = "<group>"; };
 		902007C52C52513200021CA3 /* GuidePertamaAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GuidePertamaAudio.mp3; sourceTree = "<group>"; };
 		902007C72C52535200021CA3 /* StartNGuidePertama.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StartNGuidePertama.mp3; sourceTree = "<group>"; };
 		9035808D2C47AD8F00F0D2CD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerView.swift; path = ../View/TimerView.swift; sourceTree = "<group>"; };
 		9049D9B12C4F960800ABFCB4 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ArahanKameraAudio.mp3; sourceTree = "<group>"; };
 		9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CountDown1Sec.mp3; sourceTree = "<group>"; };
 		AA1CEF582C4E5A2B006E6DE4 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutListView.swift; path = ../View/WorkoutListView.swift; sourceTree = "<group>"; };
 		AA1CEF5A2C4E5B18006E6DE4 /* WorkoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutList.swift; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 			children = (
 				902007C72C52535200021CA3 /* StartNGuidePertama.mp3 */,
 				902007C52C52513200021CA3 /* GuidePertamaAudio.mp3 */,
+				9019FC302C58A5800006F04C /* ArahanKameraAudio.mp3 */,
 				902007C32C524FE400021CA3 /* Start.mp3 */,
-				9049D9B82C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 */,
 				9049D9BE2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 */,
 			);
 			path = Sound;
@@ -312,9 +312,9 @@
 				9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */,
 				902007C42C524FE400021CA3 /* Start.mp3 in Resources */,
 				048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */,
-				9049D9BA2C4FA18900ABFCB4 /* ArahanKameraAudio.mp3 in Resources */,
 				048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */,
 				902007C62C52513200021CA3 /* GuidePertamaAudio.mp3 in Resources */,
+				9019FC312C58A5800006F04C /* ArahanKameraAudio.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitRep/Preview Content\"";
-				DEVELOPMENT_TEAM = TCTRPSM3Y8;
+				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
@@ -526,7 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = TCTRPSM3Y8;
+				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";

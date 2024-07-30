@@ -45,7 +45,7 @@ struct SetRepCounterOverlay: View {//nanti diganti ke viewmodif
                             .padding(.bottom, 5)//Ini code untuk garis
                         
                         VStack{
-                            Text("**\(set) of \(totalset)**")
+                            Text("**\(selectedSet+1) of \(totalset)**")
                                 .frame(maxWidth: .infinity)
                                 .multilineTextAlignment(.center)
                                 .foregroundColor(.white)
