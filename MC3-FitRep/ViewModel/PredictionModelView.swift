@@ -10,6 +10,7 @@ import SwiftUI
 class PredictionViewModel: ObservableObject {
     
     // Published Variables
+    @Published var restTimeActive: Bool = false
     @Published var currentFrame: UIImage?
     @Published var predicted: String = ""
     @Published var confidence: String = ""
@@ -99,6 +100,7 @@ class PredictionViewModel: ObservableObject {
                 if prediction.label == "Idle"{
                 self.idleFrameCount += 1
                     if self.idleFrameCount >= 8 {
+                        self.pausePrediction2()
                         self.indicator = true
                     }
                 }
@@ -112,6 +114,15 @@ class PredictionViewModel: ObservableObject {
     private func pausePrediction() {
         self.isPaused = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.isPaused = false
+            self.benarFrameCount = 0
+            self.salahFrameCount = 0
+        }
+    }
+    
+    private func pausePrediction2() {
+        self.isPaused = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.isPaused = false
             self.benarFrameCount = 0
             self.salahFrameCount = 0

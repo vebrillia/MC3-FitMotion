@@ -17,6 +17,7 @@ extension BicepCurl {
     enum Label: String, CaseIterable {
         case Benar = "Benar"
         case Salah = "Salah"
+        case OtherAction = "OtherAction"
 
         /// A negative class that represents irrelevant actions.
         case Idle = "Idle"

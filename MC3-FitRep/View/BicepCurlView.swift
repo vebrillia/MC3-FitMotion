@@ -40,6 +40,7 @@ struct BicepCurlView: View {
     
     @State var popUpPresented: Bool = true
     
+    
     let boxFrame = CGRect(x: 50, y: 100, width: 325, height: 650)
     
     //move page
@@ -107,7 +108,6 @@ struct BicepCurlView: View {
                         {
                             if predictionVM.benarCount == totalRep {
                                 isRestTime = true
-                                predictionVM.benarCount = 0
                                 //KASIH CODE UNTUK BERHENTIIN AKTIVITAS CAMERA, nanti kalau isRestTime false jalan lagi dan showrest ikut jadi false.     selectedSet += 1
                             }
                             
@@ -169,6 +169,9 @@ struct BicepCurlView: View {
                             .onAppear {
                                 selectedSet += 1
                             }
+                            .onDisappear {
+                                predictionVM.benarCount = 0
+                                                        }
                     }
                     .presentationBackground(Color.clear.opacity(0.5))
                 }
@@ -196,6 +199,9 @@ struct BicepCurlView: View {
         //        .padding()
         .onAppear {
             predictionVM.updateUILabels(with: .startingPrediction)
+            UIApplication.shared.isIdleTimerDisabled = true
+        }.onDisappear {
+            UIApplication.shared.isIdleTimerDisabled = false
         }
         .onReceive(
             NotificationCenter
@@ -213,6 +219,7 @@ struct PulseView: View {
     @ObservedObject var predictionVM: PredictionViewModel
     @Binding var animatePulse: Bool
     @Binding var bodypose: Int
+//    @StateObject var audioManager = AudioManager()
     
     var body: some View {
         ZStack {
@@ -241,6 +248,10 @@ struct PulseView: View {
         }
         .onChange(of: predictionVM.predicted) { newValue in
             bodypose = predictionVM.pulseIndicator
+//            if bodypose == 2 {
+//                audioManager.playSoundEffect(named: "Wrong")
+//                print("Bunyi")
+//            }
         }
     }//PulseCircle
     
@@ -249,6 +260,7 @@ struct PulseView: View {
             return Color.green
         } else if bodypose == 2 {
             return Color.red
+            
         } else {
             return Color.gray
         }

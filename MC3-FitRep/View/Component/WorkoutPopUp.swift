@@ -98,7 +98,7 @@ struct PopUpGuide: ViewModifier {
     }
     
     private var images: [String]{
-        return ["Alert", "Weight", "Feather", "PersonFrame"]
+        return ["Alert", "Weight", "Feather", "SideStand"]
     }
     
     private var titles: [String] {
