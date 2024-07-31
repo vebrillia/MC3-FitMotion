@@ -16,6 +16,7 @@
 		04A226F22C4E5F44007CB9E8 /* GuidanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */; };
 		2893384F2C509D6D0036B14B /* BicepCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2893384E2C509D6D0036B14B /* BicepCurlView.swift */; };
 		289338512C509DB30036B14B /* PredictionModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289338502C509DB30036B14B /* PredictionModelView.swift */; };
+		28C87FF52C5A1828005D920F /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 28C87FF42C5A1828005D920F /* Correct.mp3 */; };
 		9019FC312C58A5800006F04C /* ArahanKameraAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9019FC302C58A5800006F04C /* ArahanKameraAudio.mp3 */; };
 		9019FC332C58C71D0006F04C /* BicepCurl.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9019FC322C58C71D0006F04C /* BicepCurl.mlmodel */; };
 		9019FC352C58F0080006F04C /* Wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9019FC342C58F0080006F04C /* Wrong.mp3 */; };
@@ -61,6 +62,7 @@
 		04A226F12C4E5F44007CB9E8 /* GuidanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GuidanceView.swift; path = ../View/GuidanceView.swift; sourceTree = "<group>"; };
 		2893384E2C509D6D0036B14B /* BicepCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BicepCurlView.swift; path = ../View/BicepCurlView.swift; sourceTree = "<group>"; };
 		289338502C509DB30036B14B /* PredictionModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PredictionModelView.swift; path = ../ViewModel/PredictionModelView.swift; sourceTree = "<group>"; };
+		28C87FF42C5A1828005D920F /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
 		9019FC302C58A5800006F04C /* ArahanKameraAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ArahanKameraAudio.mp3; sourceTree = "<group>"; };
 		9019FC322C58C71D0006F04C /* BicepCurl.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BicepCurl.mlmodel; sourceTree = "<group>"; };
 		9019FC342C58F0080006F04C /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		9049D9BB2C4FA19100ABFCB4 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				28C87FF42C5A1828005D920F /* Correct.mp3 */,
 				9019FC342C58F0080006F04C /* Wrong.mp3 */,
 				902007C72C52535200021CA3 /* StartNGuidePertama.mp3 */,
 				902007C52C52513200021CA3 /* GuidePertamaAudio.mp3 */,
@@ -315,6 +318,7 @@
 				9049D9BF2C4FA3A700ABFCB4 /* CountDown1Sec.mp3 in Resources */,
 				902007C42C524FE400021CA3 /* Start.mp3 in Resources */,
 				048D50B92C43BE9C00A60AC0 /* Preview Assets.xcassets in Resources */,
+				28C87FF52C5A1828005D920F /* Correct.mp3 in Resources */,
 				9019FC352C58F0080006F04C /* Wrong.mp3 in Resources */,
 				048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */,
 				902007C62C52513200021CA3 /* GuidePertamaAudio.mp3 in Resources */,
@@ -495,7 +499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitRep/Preview Content\"";
-				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
+				DEVELOPMENT_TEAM = 64N8G77AT7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
@@ -510,7 +514,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = apple.dev.MC3FitMotionCICA;
+				PRODUCT_BUNDLE_IDENTIFIER = apple.dev.MC3FitMotion23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -530,7 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC3-FitMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = 4C9DP8TQPJ;
+				DEVELOPMENT_TEAM = 64N8G77AT7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to your camera to analyse your movement.";
@@ -545,7 +549,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = apple.dev.MC3FitMotionCICA;
+				PRODUCT_BUNDLE_IDENTIFIER = apple.dev.MC3FitMotion23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

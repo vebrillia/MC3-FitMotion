@@ -8,6 +8,8 @@
 import SwiftUI
 
 class PredictionViewModel: ObservableObject {
+    //for audio
+    var audioManager = AudioManager()
     
     // Published Variables
     @Published var restTimeActive: Bool = false
@@ -73,6 +75,7 @@ class PredictionViewModel: ObservableObject {
                     print("---Benar count: \(self.benarFrameCount)")
                     
                     if self.benarFrameCount >= 3 {
+                        self.audioManager.playSoundEffect(named: "Wrong")
                         self.pausePrediction()
                         self.benarCount += 1
                         self.pulseIndicator = 1
@@ -83,6 +86,7 @@ class PredictionViewModel: ObservableObject {
                     print("Salah count: \(self.salahFrameCount)---")
                     
                     if self.salahFrameCount >= 3 {
+                        self.audioManager.playSoundEffect(named: "Wrong")
                         self.pausePrediction()
                         self.salahCount += 1
                         self.pulseIndicator = 2
