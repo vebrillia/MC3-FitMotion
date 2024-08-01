@@ -87,7 +87,7 @@ struct ExerciseDoneView: View {
                     .frame(width:350)
                 Spacer().frame(height:100)
                
-                NavigationLink(destination: GuidanceView()) {
+                NavigationLink(destination: WorkoutsListView()) {
                     Text("Selesai")
                         .foregroundStyle(Color.fontWhite)
                         .frame(width: 120, height: 40)

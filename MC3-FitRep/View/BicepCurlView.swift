@@ -32,7 +32,7 @@ struct BicepCurlView: View {
 
     @StateObject var predictionVM = PredictionViewModel()
     @State private var boxColor: Color = .gray.opacity(0.5)
-    @StateObject var audioManager = AudioManager()
+    @StateObject var audioManager = AudioManager.shared
     @State private var countdown: Int = 5
     @State private var isCountingDown = false
     @State private var timer: Timer?
@@ -106,11 +106,12 @@ struct BicepCurlView: View {
                             .foregroundColor(.white)
                             .onChange(of:predictionVM.benarCount)
                         {
-                            if predictionVM.benarCount == totalRep {
+                            if predictionVM.benarCount == totalRep && selectedSet != totalSet {
+                                audioManager.stopAllSounds()
+
+                                print("veby")
                                 isRestTime = true
-                                //KASIH CODE UNTUK BERHENTIIN AKTIVITAS CAMERA, nanti kalau isRestTime false jalan lagi dan showrest ikut jadi false.     selectedSet += 1
                             }
-                            
                         }
 //                        Text("Wrong: \(predictionVM.salahCount)")
                     }
@@ -167,11 +168,16 @@ struct BicepCurlView: View {
                     ZStack {
                         TimerView(isRestTime: $isRestTime)
                             .onAppear {
+                                predictionVM.pausePrediction3()
+                                predictionVM.pulseIndicator = 0
                                 selectedSet += 1
+                                if selectedSet == totalSet{
+                                    audioManager.stopAllSounds()
+                                }
                             }
                             .onDisappear {
                                 predictionVM.benarCount = 0
-                                                        }
+                                        }
                     }
                     .presentationBackground(Color.clear.opacity(0.5))
                 }
@@ -189,14 +195,16 @@ struct BicepCurlView: View {
                         StartView
                     }
                     
-                    if selectedSet >= totalSet {
+                    if selectedSet == totalSet {
                         ExerciseDoneView(totalSet: $totalSet, totalRep: $totalRep)
+                            .onAppear{
+                                AudioManager.shared.stopAllSounds()
+                            }
                     }
             
         }
         
         .toolbar(.hidden)
-        //        .padding()
         .onAppear {
             predictionVM.updateUILabels(with: .startingPrediction)
             UIApplication.shared.isIdleTimerDisabled = true
@@ -248,12 +256,8 @@ struct PulseView: View {
         }
         .onChange(of: predictionVM.predicted) { newValue in
             bodypose = predictionVM.pulseIndicator
-//            if bodypose == 2 {
-//                audioManager.playSoundEffect(named: "Wrong")
-//                print("Bunyi")
-//            }
         }
-    }//PulseCircle
+    }
     
     func pulseColor(_ bodypose: Int) -> Color {
         if bodypose == 1 {
@@ -265,7 +269,7 @@ struct PulseView: View {
             return Color.gray
         }
     }
-}//Pulse
+}
 
 #Preview {
     PulseView(predictionVM: PredictionViewModel(), animatePulse: .constant(true), bodypose: .constant(1))

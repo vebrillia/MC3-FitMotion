@@ -9,7 +9,7 @@ import SwiftUI
 
 class PredictionViewModel: ObservableObject {
     //for audio
-    var audioManager = AudioManager()
+    var audioManager = AudioManager.shared
     
     // Published Variables
     @Published var restTimeActive: Bool = false
@@ -44,6 +44,14 @@ class PredictionViewModel: ObservableObject {
     /// Maintains the aggregate time for each action the model predicts.
     var actionFrameCounts = [String: Int]()
     
+    func disableVideoCaptureSession() {
+        videoCapture?.isEnabled = false
+    }
+    func enableVideoCaptureSession() {
+        videoCapture?.isEnabled = true
+    }
+
+    
     // Initialize the window size
     init() {
         let bicepCurl = BicepCurl()
@@ -74,8 +82,8 @@ class PredictionViewModel: ObservableObject {
                     self.salahFrameCount = 0
                     print("---Benar count: \(self.benarFrameCount)")
                     
-                    if self.benarFrameCount >= 3 {
-                        self.audioManager.playSoundEffect(named: "Wrong")
+                    if self.benarFrameCount >= 4 {
+                        self.audioManager.playSoundEffect(named: "Correct")
                         self.pausePrediction()
                         self.benarCount += 1
                         self.pulseIndicator = 1
@@ -115,23 +123,36 @@ class PredictionViewModel: ObservableObject {
         DispatchQueue.main.async { self.confidence = confidenceString }
     }
 
-    private func pausePrediction() {
+    func pausePrediction(for duration: TimeInterval) {
+        print("pausePrediction for \(duration) seconds called")
         self.isPaused = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
             self.isPaused = false
             self.benarFrameCount = 0
             self.salahFrameCount = 0
+            print("\(duration) Detik Break --")
         }
     }
-    
-    private func pausePrediction2() {
-        self.isPaused = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.isPaused = false
-            self.benarFrameCount = 0
-            self.salahFrameCount = 0
+    func pausePrediction() {
+        pausePrediction(for: 2)
+    }
+
+    func pausePrediction2() {
+        pausePrediction(for: 5)
+    }
+
+    func pausePrediction3() {
+        self.audioManager.playSoundEffect(named: "countdown2")
+        print("Disable Video for 30 second")
+        // Disable the video capture session
+        disableVideoCaptureSession()
+        
+        // Schedule re-enabling of the video capture session after 30 seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 30) {
+            self.enableVideoCaptureSession()
         }
     }
+
     
     func updateRecognizedPoints(with points: [CGPoint]) {
         self.recognizedPoints = points

@@ -43,7 +43,6 @@ struct TimerView: View  {
                             .font(.system(size: 48))
                             .fontWeight(.semibold)
                             .onReceive(timer) { _ in
-                                print("On receice", timer)
                                 if timeRemaining > 0 {
                                     timeRemaining -= 1
                                     progress = CGFloat(timeRemaining) / 30.0
@@ -78,7 +77,6 @@ struct TimerView: View  {
                 .offset(y: offset)
                 .onAppear{
                     timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-                    print("Jalan??", isRestTime)
                 }
             //VStack untuk background only
         }

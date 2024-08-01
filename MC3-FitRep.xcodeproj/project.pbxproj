@@ -17,6 +17,7 @@
 		2893384F2C509D6D0036B14B /* BicepCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2893384E2C509D6D0036B14B /* BicepCurlView.swift */; };
 		289338512C509DB30036B14B /* PredictionModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289338502C509DB30036B14B /* PredictionModelView.swift */; };
 		28C87FF52C5A1828005D920F /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 28C87FF42C5A1828005D920F /* Correct.mp3 */; };
+		28C87FFB2C5B56EB005D920F /* countdown2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 28C87FFA2C5B56EB005D920F /* countdown2.mp3 */; };
 		9019FC312C58A5800006F04C /* ArahanKameraAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9019FC302C58A5800006F04C /* ArahanKameraAudio.mp3 */; };
 		9019FC332C58C71D0006F04C /* BicepCurl.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9019FC322C58C71D0006F04C /* BicepCurl.mlmodel */; };
 		9019FC352C58F0080006F04C /* Wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9019FC342C58F0080006F04C /* Wrong.mp3 */; };
@@ -63,6 +64,7 @@
 		2893384E2C509D6D0036B14B /* BicepCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BicepCurlView.swift; path = ../View/BicepCurlView.swift; sourceTree = "<group>"; };
 		289338502C509DB30036B14B /* PredictionModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PredictionModelView.swift; path = ../ViewModel/PredictionModelView.swift; sourceTree = "<group>"; };
 		28C87FF42C5A1828005D920F /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
+		28C87FFA2C5B56EB005D920F /* countdown2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = countdown2.mp3; sourceTree = "<group>"; };
 		9019FC302C58A5800006F04C /* ArahanKameraAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ArahanKameraAudio.mp3; sourceTree = "<group>"; };
 		9019FC322C58C71D0006F04C /* BicepCurl.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BicepCurl.mlmodel; sourceTree = "<group>"; };
 		9019FC342C58F0080006F04C /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		9049D9BB2C4FA19100ABFCB4 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				28C87FFA2C5B56EB005D920F /* countdown2.mp3 */,
 				28C87FF42C5A1828005D920F /* Correct.mp3 */,
 				9019FC342C58F0080006F04C /* Wrong.mp3 */,
 				902007C72C52535200021CA3 /* StartNGuidePertama.mp3 */,
@@ -323,6 +326,7 @@
 				048D50B62C43BE9C00A60AC0 /* Assets.xcassets in Resources */,
 				902007C62C52513200021CA3 /* GuidePertamaAudio.mp3 in Resources */,
 				9019FC312C58A5800006F04C /* ArahanKameraAudio.mp3 in Resources */,
+				28C87FFB2C5B56EB005D920F /* countdown2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
